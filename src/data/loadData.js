@@ -4,11 +4,12 @@ async function readJson(path) {
   return response.json();
 }
 
-export async function loadPrototypeData() {
+export async function loadPrototypeData(baseUrl = import.meta.env.BASE_URL) {
+  const dataPath = (fileName) => `${baseUrl}data/${fileName}`;
   const [zones, stores, scores] = await Promise.all([
-    readJson('/data/zones.json'),
-    readJson('/data/stores.json'),
-    readJson('/data/scores.json'),
+    readJson(dataPath('zones.json')),
+    readJson(dataPath('stores.json')),
+    readJson(dataPath('scores.json')),
   ]);
   return { zones, stores, scores };
 }
