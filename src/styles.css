@@ -165,3 +165,44 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{ou
   .hero,.content-section,.conclusion{margin-inline:10px;border-radius:24px;padding-inline:22px}
   .ai-flow article{margin:0 0 12px}
 }
+
+/* Transparent assessment */
+.map-legend{max-width:460px;flex-wrap:wrap;align-items:center}
+.map-legend small{flex-basis:100%;color:var(--muted);line-height:1.35}
+.assessment-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,.7fr);gap:22px;margin-top:28px}
+.score-breakdown,.methodology-card,.economics-card,.recommendation-explanation{border-radius:24px;background:#f5f7fa;padding:28px}
+.section-heading-row{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+.section-heading-row h3,.methodology-card h3,.economics-card h3,.recommendation-explanation h3{font-size:24px;margin:4px 0 20px}
+.section-heading-row>b{display:grid;place-items:center;min-width:76px;height:54px;border-radius:16px;background:var(--lime);font-size:20px}
+.factor-list>div{grid-template-columns:minmax(190px,.9fr) minmax(140px,1fr) 72px;gap:16px;margin:0;padding:13px 0;border-bottom:1px solid var(--line)}
+.factor-list>div>span strong,.factor-list>div>span small{display:block}
+.factor-list>div>span strong{font-size:13px}
+.factor-list>div>span small{margin-top:4px;color:var(--muted);font-size:11px}
+.factor-list>div>b{text-align:right;color:var(--purple);font-size:16px}
+.factor-list>div>b small{color:var(--muted);font-size:10px}
+.factor-track{height:10px;background:#dfe2e7}
+.factor-track i{background:linear-gradient(90deg,var(--purple),#9c63ff)}
+.factor-total{margin:18px 0 0;padding:15px 18px;border-radius:14px;background:#171717;color:#fff;font-weight:700;text-align:right}
+.methodology-card{background:#eee7ff}
+.methodology-card>p{font-size:13px;line-height:1.55;color:#4f4960}
+.weight-list{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:18px 0}
+.weight-list span{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 11px;border-radius:10px;background:rgba(255,255,255,.7)}
+.weight-list small{font-size:10px}.weight-list b{color:var(--purple)}
+.method-note{padding-top:15px;border-top:1px solid rgba(108,30,255,.18);font-weight:600}
+.economics-card{display:grid;grid-template-columns:.7fr 1.3fr;gap:30px;margin-top:22px;background:#333;color:#fff}
+.economics-card .eyebrow{color:var(--lime)}
+.economics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.economics-grid span{padding:15px;border-radius:14px;background:rgba(255,255,255,.09)}
+.economics-grid small,.economics-grid b{display:block}.economics-grid small{color:#cfcfcf;font-size:10px}.economics-grid b{margin-top:7px;font-size:14px}
+.recommendation-explanation{margin-top:22px;background:#fff;border:1px solid var(--line)}
+.explanation-heading{display:flex;gap:14px;align-items:flex-start}.explanation-heading>span{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:var(--purple);color:#fff;font-size:20px}
+.verdict-card{padding:22px;border-radius:18px;background:#efffdc}.verdict-card small,.verdict-card b{display:block}.verdict-card b{font-size:21px;margin-top:6px}.verdict-card p{margin-bottom:0;color:#465239;line-height:1.55}
+.explanation-columns{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.explanation-columns section,.manual-checks{padding:22px;border-radius:18px;background:#f5f7fa}
+.explanation-columns h4,.manual-checks h4{margin:0 0 13px;font-size:15px}.explanation-columns ul,.manual-checks ul{margin:0;padding-left:19px}.explanation-columns li,.manual-checks li{margin:8px 0;color:var(--muted);font-size:13px;line-height:1.45}
+.decision-context{margin:18px 0;padding:20px 22px;border-left:5px solid var(--purple);background:#eee7ff;border-radius:0 18px 18px 0}.decision-context p{font-size:13px;line-height:1.55}.decision-context p:last-child{margin-bottom:0}
+.manual-checks{background:#fff7df;border:1px solid #f4df9f}
+.recommended-action{margin:18px 0 0;padding:18px 20px;border-radius:16px;background:var(--purple);color:#fff;line-height:1.5}
+
+@media(max-width:900px){.assessment-layout,.economics-card{grid-template-columns:1fr}.economics-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.factor-list>div{grid-template-columns:1fr 65px}.factor-list>div .factor-track{grid-column:1/-1}.weight-list,.economics-grid,.explanation-columns{grid-template-columns:1fr}.score-breakdown,.methodology-card,.economics-card,.recommendation-explanation{padding:20px}.details-title h2{font-size:28px}}

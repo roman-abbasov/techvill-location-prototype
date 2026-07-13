@@ -3,1062 +3,2448 @@
     "zone_id": "z_001",
     "score": 62,
     "revenue_forecast": 4270000,
-    "payback_months": 30,
+    "payback_months": 23,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 259100,
+      "monthlyCashFlow": 359500,
+      "paybackMonths": 23
+    },
     "cannibalization_risk": "low",
     "nearest_own_store": {
       "store_id": "s_001",
       "distance_m": 1361
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "positive",
-        "weight": 0.12
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 88,
+        "displayValue": "88 из 100",
+        "normalizedScore": 91,
+        "maxPoints": 18,
+        "points": 16,
+        "lostPoints": 2
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "negative",
-        "weight": 0.15
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 277,
+        "displayValue": "277 заказов/км²",
+        "normalizedScore": 77,
+        "maxPoints": 16,
+        "points": 12,
+        "lostPoints": 4
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "positive",
-        "weight": 0.73
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 12433,
+        "displayValue": "12 433 чел./км²",
+        "normalizedScore": 40,
+        "maxPoints": 14,
+        "points": 6,
+        "lostPoints": 8
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "positive",
-        "weight": 0.17
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 0.9,
+        "displayValue": "индекс 0.90",
+        "normalizedScore": 22,
+        "maxPoints": 10,
+        "points": 2,
+        "lostPoints": 8
       },
       {
-        "factor": "Близость метро",
-        "impact": "positive",
-        "weight": 0.73
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 195,
+        "displayValue": "195 м",
+        "normalizedScore": 94,
+        "maxPoints": 10,
+        "points": 10,
+        "lostPoints": 0
       },
       {
-        "factor": "Новая застройка",
-        "impact": "negative",
-        "weight": 0.17
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 4,
+        "displayValue": "4 в радиусе 300 м",
+        "normalizedScore": 33,
+        "maxPoints": 9,
+        "points": 3,
+        "lostPoints": 6
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "positive",
-        "weight": 0.58
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 1,
+        "displayValue": "1 проект рядом",
+        "normalizedScore": 25,
+        "maxPoints": 8,
+        "points": 2,
+        "lostPoints": 6
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "negative",
-        "weight": 0.63
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 2591,
+        "displayValue": "2 591 ₽/м²",
+        "normalizedScore": 83,
+        "maxPoints": 8,
+        "points": 7,
+        "lostPoints": 1
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "positive",
-        "weight": 0.46
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 60,
+        "displayValue": "60 из 100",
+        "normalizedScore": 60,
+        "maxPoints": 7,
+        "points": 4,
+        "lostPoints": 3
       }
     ],
-    "explanation_text": "Комсомольский проспект, 28 получает 62 баллов: сильнее всего помогают пешеходный трафик и близость метро. Главное ограничение — конкуренты рядом. Риск каннибализации оценивается как низкий."
+    "recommendation": {
+      "verdict": "Высокий приоритет для детальной проверки",
+      "summary": "Комсомольский проспект, 28 получает 62 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Пешеходный трафик: 88 из 100 — 16 из 18 баллов",
+        "Спрос в доставке: 277 заказов/км² — 12 из 16 баллов",
+        "Близость метро: 195 м — 10 из 10 баллов"
+      ],
+      "constraints": [
+        "Плотность населения: 12 433 чел./км² — недобрано 8 баллов",
+        "Доход аудитории: индекс 0.90 — недобрано 8 баллов"
+      ],
+      "economics": "Прогноз выручки — 4 270 000 ₽ в месяц. Расчётный денежный поток — 359 500 ₽ в месяц, сценарная окупаемость — 23 мес.",
+      "cannibalization": "Риск каннибализации — низкий. Ближайший магазин: ул. Остоженка, 27, расстояние 1 361 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Рассматривать адрес в приоритетном порядке и перейти к проверке помещения."
+    }
   },
   {
     "zone_id": "z_002",
     "score": 49,
     "revenue_forecast": 3880000,
-    "payback_months": 30,
+    "payback_months": null,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 581500,
+      "monthlyCashFlow": -33100,
+      "paybackMonths": null
+    },
     "cannibalization_risk": "medium",
     "nearest_own_store": {
       "store_id": "s_002",
       "distance_m": 874
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "positive",
-        "weight": 0.73
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 42,
+        "displayValue": "42 из 100",
+        "normalizedScore": 29,
+        "maxPoints": 18,
+        "points": 5,
+        "lostPoints": 13
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "positive",
-        "weight": 0.26
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 282,
+        "displayValue": "282 заказов/км²",
+        "normalizedScore": 79,
+        "maxPoints": 16,
+        "points": 13,
+        "lostPoints": 3
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "negative",
-        "weight": 0.29
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 19295,
+        "displayValue": "19 295 чел./км²",
+        "normalizedScore": 73,
+        "maxPoints": 14,
+        "points": 10,
+        "lostPoints": 4
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "negative",
-        "weight": 0.4
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 1.31,
+        "displayValue": "индекс 1.31",
+        "normalizedScore": 68,
+        "maxPoints": 10,
+        "points": 7,
+        "lostPoints": 3
       },
       {
-        "factor": "Близость метро",
-        "impact": "negative",
-        "weight": 0.48
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 1283,
+        "displayValue": "1 283 м",
+        "normalizedScore": 30,
+        "maxPoints": 10,
+        "points": 3,
+        "lostPoints": 7
       },
       {
-        "factor": "Новая застройка",
-        "impact": "negative",
-        "weight": 0.5
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 0,
+        "displayValue": "0 в радиусе 300 м",
+        "normalizedScore": 100,
+        "maxPoints": 9,
+        "points": 9,
+        "lostPoints": 0
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "positive",
-        "weight": 0.6
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 0,
+        "displayValue": "0 проектов рядом",
+        "normalizedScore": 0,
+        "maxPoints": 8,
+        "points": 0,
+        "lostPoints": 8
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "positive",
-        "weight": 0.38
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 5815,
+        "displayValue": "5 815 ₽/м²",
+        "normalizedScore": 15,
+        "maxPoints": 8,
+        "points": 1,
+        "lostPoints": 7
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "negative",
-        "weight": 0.46
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 26,
+        "displayValue": "26 из 100",
+        "normalizedScore": 15,
+        "maxPoints": 7,
+        "points": 1,
+        "lostPoints": 6
       }
     ],
-    "explanation_text": "ул. Фадеева, 4А получает 49 баллов: сильнее всего помогают плотность населения и спрос в доставке. Главное ограничение — новая застройка. Риск каннибализации оценивается как средний."
+    "recommendation": {
+      "verdict": "Низкий приоритет в текущем сценарии",
+      "summary": "ул. Фадеева, 4А получает 49 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Спрос в доставке: 282 заказов/км² — 13 из 16 баллов",
+        "Плотность населения: 19 295 чел./км² — 10 из 14 баллов",
+        "Конкуренты рядом: 0 в радиусе 300 м — 9 из 9 баллов"
+      ],
+      "constraints": [
+        "Пешеходный трафик: 42 из 100 — недобрано 13 баллов",
+        "Новая застройка: 0 проектов рядом — недобрано 8 баллов"
+      ],
+      "economics": "Прогноз выручки — 3 880 000 ₽ в месяц. При заданных допущениях денежный поток составляет -33 100 ₽, поэтому точка не окупается.",
+      "cannibalization": "Риск каннибализации — средний. Ближайший магазин: Тверская ул., 25, расстояние 874 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Понизить приоритет адреса до устранения ключевых ограничений."
+    }
   },
   {
     "zone_id": "z_003",
     "score": 58,
     "revenue_forecast": 4080000,
-    "payback_months": 30,
+    "payback_months": 445,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 566400,
+      "monthlyCashFlow": 18000,
+      "paybackMonths": 445
+    },
     "cannibalization_risk": "low",
     "nearest_own_store": {
       "store_id": "s_003",
       "distance_m": 733
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "positive",
-        "weight": 0.26
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 93,
+        "displayValue": "93 из 100",
+        "normalizedScore": 97,
+        "maxPoints": 18,
+        "points": 18,
+        "lostPoints": 0
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "positive",
-        "weight": 0.31
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 238,
+        "displayValue": "238 заказов/км²",
+        "normalizedScore": 65,
+        "maxPoints": 16,
+        "points": 10,
+        "lostPoints": 6
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "positive",
-        "weight": 0.84
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 14602,
+        "displayValue": "14 602 чел./км²",
+        "normalizedScore": 50,
+        "maxPoints": 14,
+        "points": 7,
+        "lostPoints": 7
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "positive",
-        "weight": 0.57
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 1.36,
+        "displayValue": "индекс 1.36",
+        "normalizedScore": 73,
+        "maxPoints": 10,
+        "points": 7,
+        "lostPoints": 3
       },
       {
-        "factor": "Близость метро",
-        "impact": "negative",
-        "weight": 0.73
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 1507,
+        "displayValue": "1 507 м",
+        "normalizedScore": 17,
+        "maxPoints": 10,
+        "points": 2,
+        "lostPoints": 8
       },
       {
-        "factor": "Новая застройка",
-        "impact": "negative",
-        "weight": 0.5
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 2,
+        "displayValue": "2 в радиусе 300 м",
+        "normalizedScore": 67,
+        "maxPoints": 9,
+        "points": 6,
+        "lostPoints": 3
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "positive",
-        "weight": 0.4
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 0,
+        "displayValue": "0 проектов рядом",
+        "normalizedScore": 0,
+        "maxPoints": 8,
+        "points": 0,
+        "lostPoints": 8
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "negative",
-        "weight": 0.13
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 5664,
+        "displayValue": "5 664 ₽/м²",
+        "normalizedScore": 18,
+        "maxPoints": 8,
+        "points": 1,
+        "lostPoints": 7
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "negative",
-        "weight": 0.42
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 84,
+        "displayValue": "84 из 100",
+        "normalizedScore": 92,
+        "maxPoints": 7,
+        "points": 7,
+        "lostPoints": 0
       }
     ],
-    "explanation_text": "ул. Покровка, 31 получает 58 баллов: сильнее всего помогают пешеходный трафик и автомобильный трафик. Главное ограничение — близость метро. Риск каннибализации оценивается как низкий."
+    "recommendation": {
+      "verdict": "Требуется дополнительная проверка",
+      "summary": "ул. Покровка, 31 получает 58 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Пешеходный трафик: 93 из 100 — 18 из 18 баллов",
+        "Спрос в доставке: 238 заказов/км² — 10 из 16 баллов",
+        "Плотность населения: 14 602 чел./км² — 7 из 14 баллов"
+      ],
+      "constraints": [
+        "Близость метро: 1 507 м — недобрано 8 баллов",
+        "Новая застройка: 0 проектов рядом — недобрано 8 баллов"
+      ],
+      "economics": "Прогноз выручки — 4 080 000 ₽ в месяц. Расчётный денежный поток — 18 000 ₽ в месяц, сценарная окупаемость — 445 мес.",
+      "cannibalization": "Риск каннибализации — низкий. Ближайший магазин: Чистопрудный б-р, 12, расстояние 733 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Отправить адрес на дополнительную проверку экономики, трафика и каннибализации."
+    }
   },
   {
     "zone_id": "z_004",
     "score": 60,
     "revenue_forecast": 4150000,
-    "payback_months": 30,
+    "payback_months": 47,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 423700,
+      "monthlyCashFlow": 173300,
+      "paybackMonths": 47
+    },
     "cannibalization_risk": "low",
     "nearest_own_store": {
       "store_id": "s_004",
       "distance_m": 1366
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "positive",
-        "weight": 0.6
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 46,
+        "displayValue": "46 из 100",
+        "normalizedScore": 35,
+        "maxPoints": 18,
+        "points": 6,
+        "lostPoints": 12
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "positive",
-        "weight": 0.44
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 247,
+        "displayValue": "247 заказов/км²",
+        "normalizedScore": 68,
+        "maxPoints": 16,
+        "points": 11,
+        "lostPoints": 5
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "negative",
-        "weight": 0.2
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 18018,
+        "displayValue": "18 018 чел./км²",
+        "normalizedScore": 67,
+        "maxPoints": 14,
+        "points": 9,
+        "lostPoints": 5
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "positive",
-        "weight": 0.13
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 1.49,
+        "displayValue": "индекс 1.49",
+        "normalizedScore": 88,
+        "maxPoints": 10,
+        "points": 9,
+        "lostPoints": 1
       },
       {
-        "factor": "Близость метро",
-        "impact": "negative",
-        "weight": 0.12
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 882,
+        "displayValue": "882 м",
+        "normalizedScore": 54,
+        "maxPoints": 10,
+        "points": 5,
+        "lostPoints": 5
       },
       {
-        "factor": "Новая застройка",
-        "impact": "positive",
-        "weight": 0.17
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 1,
+        "displayValue": "1 в радиусе 300 м",
+        "normalizedScore": 83,
+        "maxPoints": 9,
+        "points": 8,
+        "lostPoints": 1
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "positive",
-        "weight": 0.44
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 2,
+        "displayValue": "2 проекта рядом",
+        "normalizedScore": 50,
+        "maxPoints": 8,
+        "points": 4,
+        "lostPoints": 4
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "positive",
-        "weight": 0.13
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 4237,
+        "displayValue": "4 237 ₽/м²",
+        "normalizedScore": 48,
+        "maxPoints": 8,
+        "points": 4,
+        "lostPoints": 4
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "negative",
-        "weight": 0.12
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 58,
+        "displayValue": "58 из 100",
+        "normalizedScore": 57,
+        "maxPoints": 7,
+        "points": 4,
+        "lostPoints": 3
       }
     ],
-    "explanation_text": "Шмитовский проезд, 16 получает 60 баллов: сильнее всего помогают плотность населения и доход аудитории. Главное ограничение — пешеходный трафик. Риск каннибализации оценивается как низкий."
+    "recommendation": {
+      "verdict": "Высокий приоритет для детальной проверки",
+      "summary": "Шмитовский проезд, 16 получает 60 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Спрос в доставке: 247 заказов/км² — 11 из 16 баллов",
+        "Плотность населения: 18 018 чел./км² — 9 из 14 баллов",
+        "Доход аудитории: индекс 1.49 — 9 из 10 баллов"
+      ],
+      "constraints": [
+        "Пешеходный трафик: 46 из 100 — недобрано 12 баллов",
+        "Спрос в доставке: 247 заказов/км² — недобрано 5 баллов"
+      ],
+      "economics": "Прогноз выручки — 4 150 000 ₽ в месяц. Расчётный денежный поток — 173 300 ₽ в месяц, сценарная окупаемость — 47 мес.",
+      "cannibalization": "Риск каннибализации — низкий. Ближайший магазин: Красная Пресня, 32, расстояние 1 366 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Рассматривать адрес в приоритетном порядке и перейти к проверке помещения."
+    }
   },
   {
     "zone_id": "z_005",
     "score": 56,
     "revenue_forecast": 4180000,
-    "payback_months": 30,
+    "payback_months": 69,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 485000,
+      "monthlyCashFlow": 117400,
+      "paybackMonths": 69
+    },
     "cannibalization_risk": "medium",
     "nearest_own_store": {
       "store_id": "s_005",
       "distance_m": 320
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "positive",
-        "weight": 0.12
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 85,
+        "displayValue": "85 из 100",
+        "normalizedScore": 87,
+        "maxPoints": 18,
+        "points": 16,
+        "lostPoints": 2
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "negative",
-        "weight": 0.23
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 330,
+        "displayValue": "330 заказов/км²",
+        "normalizedScore": 94,
+        "maxPoints": 16,
+        "points": 15,
+        "lostPoints": 1
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "positive",
-        "weight": 0.67
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 13023,
+        "displayValue": "13 023 чел./км²",
+        "normalizedScore": 43,
+        "maxPoints": 14,
+        "points": 6,
+        "lostPoints": 8
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "negative",
-        "weight": 0.12
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 0.82,
+        "displayValue": "индекс 0.82",
+        "normalizedScore": 13,
+        "maxPoints": 10,
+        "points": 1,
+        "lostPoints": 9
       },
       {
-        "factor": "Близость метро",
-        "impact": "negative",
-        "weight": 0.12
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 855,
+        "displayValue": "855 м",
+        "normalizedScore": 56,
+        "maxPoints": 10,
+        "points": 5,
+        "lostPoints": 5
       },
       {
-        "factor": "Новая застройка",
-        "impact": "positive",
-        "weight": 0.17
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 4,
+        "displayValue": "4 в радиусе 300 м",
+        "normalizedScore": 33,
+        "maxPoints": 9,
+        "points": 3,
+        "lostPoints": 6
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "positive",
-        "weight": 0.82
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 2,
+        "displayValue": "2 проекта рядом",
+        "normalizedScore": 50,
+        "maxPoints": 8,
+        "points": 4,
+        "lostPoints": 4
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "negative",
-        "weight": 0.63
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 4850,
+        "displayValue": "4 850 ₽/м²",
+        "normalizedScore": 35,
+        "maxPoints": 8,
+        "points": 3,
+        "lostPoints": 5
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "negative",
-        "weight": 0.19
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 43,
+        "displayValue": "43 из 100",
+        "normalizedScore": 37,
+        "maxPoints": 7,
+        "points": 3,
+        "lostPoints": 4
       }
     ],
-    "explanation_text": "ул. Ленинская Слобода, 26 получает 56 баллов: сильнее всего помогают спрос в доставке и пешеходный трафик. Главное ограничение — конкуренты рядом. Риск каннибализации оценивается как средний."
+    "recommendation": {
+      "verdict": "Требуется дополнительная проверка",
+      "summary": "ул. Ленинская Слобода, 26 получает 56 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Пешеходный трафик: 85 из 100 — 16 из 18 баллов",
+        "Спрос в доставке: 330 заказов/км² — 15 из 16 баллов",
+        "Плотность населения: 13 023 чел./км² — 6 из 14 баллов"
+      ],
+      "constraints": [
+        "Доход аудитории: индекс 0.82 — недобрано 9 баллов",
+        "Плотность населения: 13 023 чел./км² — недобрано 8 баллов"
+      ],
+      "economics": "Прогноз выручки — 4 180 000 ₽ в месяц. Расчётный денежный поток — 117 400 ₽ в месяц, сценарная окупаемость — 69 мес.",
+      "cannibalization": "Риск каннибализации — средний. Ближайший магазин: Автозаводская ул., 8, расстояние 320 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Отправить адрес на дополнительную проверку экономики, трафика и каннибализации."
+    }
   },
   {
     "zone_id": "z_006",
     "score": 42,
     "revenue_forecast": 3380000,
-    "payback_months": 30,
+    "payback_months": null,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 508900,
+      "monthlyCashFlow": -50500,
+      "paybackMonths": null
+    },
     "cannibalization_risk": "medium",
     "nearest_own_store": {
       "store_id": "s_006",
       "distance_m": 846
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "positive",
-        "weight": 0.41
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 39,
+        "displayValue": "39 из 100",
+        "normalizedScore": 25,
+        "maxPoints": 18,
+        "points": 5,
+        "lostPoints": 13
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "positive",
-        "weight": 0.12
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 125,
+        "displayValue": "125 заказов/км²",
+        "normalizedScore": 30,
+        "maxPoints": 16,
+        "points": 5,
+        "lostPoints": 11
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "negative",
-        "weight": 0.36
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 16121,
+        "displayValue": "16 121 чел./км²",
+        "normalizedScore": 58,
+        "maxPoints": 14,
+        "points": 8,
+        "lostPoints": 6
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "positive",
-        "weight": 0.47
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 1.06,
+        "displayValue": "индекс 1.06",
+        "normalizedScore": 40,
+        "maxPoints": 10,
+        "points": 4,
+        "lostPoints": 6
       },
       {
-        "factor": "Близость метро",
-        "impact": "negative",
-        "weight": 0.8
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 1571,
+        "displayValue": "1 571 м",
+        "normalizedScore": 13,
+        "maxPoints": 10,
+        "points": 1,
+        "lostPoints": 9
       },
       {
-        "factor": "Новая застройка",
-        "impact": "positive",
-        "weight": 0.5
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 3,
+        "displayValue": "3 в радиусе 300 м",
+        "normalizedScore": 50,
+        "maxPoints": 9,
+        "points": 5,
+        "lostPoints": 4
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "negative",
-        "weight": 0.12
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 3,
+        "displayValue": "3 проекта рядом",
+        "normalizedScore": 75,
+        "maxPoints": 8,
+        "points": 6,
+        "lostPoints": 2
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "negative",
-        "weight": 0.38
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 5089,
+        "displayValue": "5 089 ₽/м²",
+        "normalizedScore": 30,
+        "maxPoints": 8,
+        "points": 2,
+        "lostPoints": 6
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "negative",
-        "weight": 0.25
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 78,
+        "displayValue": "78 из 100",
+        "normalizedScore": 84,
+        "maxPoints": 7,
+        "points": 6,
+        "lostPoints": 1
       }
     ],
-    "explanation_text": "Ленинградский проспект, 62 получает 42 баллов: сильнее всего помогают новая застройка и автомобильный трафик. Главное ограничение — близость метро. Риск каннибализации оценивается как средний."
+    "recommendation": {
+      "verdict": "Низкий приоритет в текущем сценарии",
+      "summary": "Ленинградский проспект, 62 получает 42 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Плотность населения: 16 121 чел./км² — 8 из 14 баллов",
+        "Новая застройка: 3 проекта рядом — 6 из 8 баллов",
+        "Автомобильный трафик: 78 из 100 — 6 из 7 баллов"
+      ],
+      "constraints": [
+        "Пешеходный трафик: 39 из 100 — недобрано 13 баллов",
+        "Спрос в доставке: 125 заказов/км² — недобрано 11 баллов"
+      ],
+      "economics": "Прогноз выручки — 3 380 000 ₽ в месяц. При заданных допущениях денежный поток составляет -50 500 ₽, поэтому точка не окупается.",
+      "cannibalization": "Риск каннибализации — средний. Ближайший магазин: Ленинградский пр-т, 47, расстояние 846 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Понизить приоритет адреса до устранения ключевых ограничений."
+    }
   },
   {
     "zone_id": "z_007",
     "score": 43,
     "revenue_forecast": 3320000,
-    "payback_months": 30,
+    "payback_months": null,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 592200,
+      "monthlyCashFlow": -144600,
+      "paybackMonths": null
+    },
     "cannibalization_risk": "medium",
     "nearest_own_store": {
       "store_id": "s_007",
       "distance_m": 903
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "positive",
-        "weight": 0.88
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 44,
+        "displayValue": "44 из 100",
+        "normalizedScore": 32,
+        "maxPoints": 18,
+        "points": 6,
+        "lostPoints": 12
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "positive",
-        "weight": 0.14
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 78,
+        "displayValue": "78 заказов/км²",
+        "normalizedScore": 15,
+        "maxPoints": 16,
+        "points": 2,
+        "lostPoints": 14
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "negative",
-        "weight": 0.24
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 20778,
+        "displayValue": "20 778 чел./км²",
+        "normalizedScore": 80,
+        "maxPoints": 14,
+        "points": 11,
+        "lostPoints": 3
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "negative",
-        "weight": 0.28
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 1.19,
+        "displayValue": "индекс 1.19",
+        "normalizedScore": 54,
+        "maxPoints": 10,
+        "points": 5,
+        "lostPoints": 5
       },
       {
-        "factor": "Близость метро",
-        "impact": "positive",
-        "weight": 0.61
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 300,
+        "displayValue": "300 м",
+        "normalizedScore": 88,
+        "maxPoints": 10,
+        "points": 9,
+        "lostPoints": 1
       },
       {
-        "factor": "Новая застройка",
-        "impact": "positive",
-        "weight": 0.17
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 4,
+        "displayValue": "4 в радиусе 300 м",
+        "normalizedScore": 33,
+        "maxPoints": 9,
+        "points": 3,
+        "lostPoints": 6
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "negative",
-        "weight": 0.33
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 2,
+        "displayValue": "2 проекта рядом",
+        "normalizedScore": 50,
+        "maxPoints": 8,
+        "points": 4,
+        "lostPoints": 4
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "negative",
-        "weight": 0.63
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 5922,
+        "displayValue": "5 922 ₽/м²",
+        "normalizedScore": 12,
+        "maxPoints": 8,
+        "points": 1,
+        "lostPoints": 7
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "negative",
-        "weight": 0.49
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 33,
+        "displayValue": "33 из 100",
+        "normalizedScore": 24,
+        "maxPoints": 7,
+        "points": 2,
+        "lostPoints": 5
       }
     ],
-    "explanation_text": "ул. Алабяна, 7 получает 43 баллов: сильнее всего помогают плотность населения и близость метро. Главное ограничение — конкуренты рядом. Риск каннибализации оценивается как средний."
+    "recommendation": {
+      "verdict": "Низкий приоритет в текущем сценарии",
+      "summary": "ул. Алабяна, 7 получает 43 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Плотность населения: 20 778 чел./км² — 11 из 14 баллов",
+        "Близость метро: 300 м — 9 из 10 баллов",
+        "Пешеходный трафик: 44 из 100 — 6 из 18 баллов"
+      ],
+      "constraints": [
+        "Спрос в доставке: 78 заказов/км² — недобрано 14 баллов",
+        "Пешеходный трафик: 44 из 100 — недобрано 12 баллов"
+      ],
+      "economics": "Прогноз выручки — 3 320 000 ₽ в месяц. При заданных допущениях денежный поток составляет -144 600 ₽, поэтому точка не окупается.",
+      "cannibalization": "Риск каннибализации — средний. Ближайший магазин: Волоколамское ш., 3, расстояние 903 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Понизить приоритет адреса до устранения ключевых ограничений."
+    }
   },
   {
     "zone_id": "z_008",
     "score": 54,
     "revenue_forecast": 4070000,
-    "payback_months": 30,
+    "payback_months": 47,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 411000,
+      "monthlyCashFlow": 171600,
+      "paybackMonths": 47
+    },
     "cannibalization_risk": "medium",
     "nearest_own_store": {
       "store_id": "s_008",
       "distance_m": 637
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "negative",
-        "weight": 0.2
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 43,
+        "displayValue": "43 из 100",
+        "normalizedScore": 31,
+        "maxPoints": 18,
+        "points": 5,
+        "lostPoints": 13
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "positive",
-        "weight": 0.12
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 303,
+        "displayValue": "303 заказов/км²",
+        "normalizedScore": 85,
+        "maxPoints": 16,
+        "points": 14,
+        "lostPoints": 2
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "negative",
-        "weight": 0.27
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 9990,
+        "displayValue": "9 990 чел./км²",
+        "normalizedScore": 29,
+        "maxPoints": 14,
+        "points": 4,
+        "lostPoints": 10
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "negative",
-        "weight": 0.25
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 1.15,
+        "displayValue": "индекс 1.15",
+        "normalizedScore": 50,
+        "maxPoints": 10,
+        "points": 5,
+        "lostPoints": 5
       },
       {
-        "factor": "Близость метро",
-        "impact": "positive",
-        "weight": 0.65
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 262,
+        "displayValue": "262 м",
+        "normalizedScore": 90,
+        "maxPoints": 10,
+        "points": 9,
+        "lostPoints": 1
       },
       {
-        "factor": "Новая застройка",
-        "impact": "negative",
-        "weight": 0.17
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 0,
+        "displayValue": "0 в радиусе 300 м",
+        "normalizedScore": 100,
+        "maxPoints": 9,
+        "points": 9,
+        "lostPoints": 0
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "positive",
-        "weight": 0.7
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 1,
+        "displayValue": "1 проект рядом",
+        "normalizedScore": 25,
+        "maxPoints": 8,
+        "points": 2,
+        "lostPoints": 6
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "positive",
-        "weight": 0.38
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 4110,
+        "displayValue": "4 110 ₽/м²",
+        "normalizedScore": 51,
+        "maxPoints": 8,
+        "points": 4,
+        "lostPoints": 4
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "positive",
-        "weight": 0.12
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 35,
+        "displayValue": "35 из 100",
+        "normalizedScore": 27,
+        "maxPoints": 7,
+        "points": 2,
+        "lostPoints": 5
       }
     ],
-    "explanation_text": "Мичуринский проспект, 21 получает 54 баллов: сильнее всего помогают спрос в доставке и близость метро. Главное ограничение — пешеходный трафик. Риск каннибализации оценивается как средний."
+    "recommendation": {
+      "verdict": "Требуется дополнительная проверка",
+      "summary": "Мичуринский проспект, 21 получает 54 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Спрос в доставке: 303 заказов/км² — 14 из 16 баллов",
+        "Близость метро: 262 м — 9 из 10 баллов",
+        "Конкуренты рядом: 0 в радиусе 300 м — 9 из 9 баллов"
+      ],
+      "constraints": [
+        "Пешеходный трафик: 43 из 100 — недобрано 13 баллов",
+        "Плотность населения: 9 990 чел./км² — недобрано 10 баллов"
+      ],
+      "economics": "Прогноз выручки — 4 070 000 ₽ в месяц. Расчётный денежный поток — 171 600 ₽ в месяц, сценарная окупаемость — 47 мес.",
+      "cannibalization": "Риск каннибализации — средний. Ближайший магазин: Мосфильмовская ул., 35, расстояние 637 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Отправить адрес на дополнительную проверку экономики, трафика и каннибализации."
+    }
   },
   {
     "zone_id": "z_009",
     "score": 59,
     "revenue_forecast": 4110000,
-    "payback_months": 30,
+    "payback_months": 35,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 359700,
+      "monthlyCashFlow": 230100,
+      "paybackMonths": 35
+    },
     "cannibalization_risk": "medium",
     "nearest_own_store": {
       "store_id": "s_009",
       "distance_m": 503
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "negative",
-        "weight": 0.33
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 89,
+        "displayValue": "89 из 100",
+        "normalizedScore": 92,
+        "maxPoints": 18,
+        "points": 17,
+        "lostPoints": 1
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "positive",
-        "weight": 0.35
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 240,
+        "displayValue": "240 заказов/км²",
+        "normalizedScore": 66,
+        "maxPoints": 16,
+        "points": 11,
+        "lostPoints": 5
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "positive",
-        "weight": 0.76
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 8658,
+        "displayValue": "8 658 чел./км²",
+        "normalizedScore": 22,
+        "maxPoints": 14,
+        "points": 3,
+        "lostPoints": 11
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "negative",
-        "weight": 0.22
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 1.4,
+        "displayValue": "индекс 1.40",
+        "normalizedScore": 78,
+        "maxPoints": 10,
+        "points": 8,
+        "lostPoints": 2
       },
       {
-        "factor": "Близость метро",
-        "impact": "negative",
-        "weight": 0.12
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 911,
+        "displayValue": "911 м",
+        "normalizedScore": 52,
+        "maxPoints": 10,
+        "points": 5,
+        "lostPoints": 5
       },
       {
-        "factor": "Новая застройка",
-        "impact": "positive",
-        "weight": 0.17
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 3,
+        "displayValue": "3 в радиусе 300 м",
+        "normalizedScore": 50,
+        "maxPoints": 9,
+        "points": 4,
+        "lostPoints": 5
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "positive",
-        "weight": 0.41
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 2,
+        "displayValue": "2 проекта рядом",
+        "normalizedScore": 50,
+        "maxPoints": 8,
+        "points": 4,
+        "lostPoints": 4
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "negative",
-        "weight": 0.38
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 3597,
+        "displayValue": "3 597 ₽/м²",
+        "normalizedScore": 62,
+        "maxPoints": 8,
+        "points": 5,
+        "lostPoints": 3
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "positive",
-        "weight": 0.17
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 37,
+        "displayValue": "37 из 100",
+        "normalizedScore": 29,
+        "maxPoints": 7,
+        "points": 2,
+        "lostPoints": 5
       }
     ],
-    "explanation_text": "ул. Дмитрия Ульянова, 20 получает 59 баллов: сильнее всего помогают пешеходный трафик и спрос в доставке. Главное ограничение — конкуренты рядом. Риск каннибализации оценивается как средний."
+    "recommendation": {
+      "verdict": "Требуется дополнительная проверка",
+      "summary": "ул. Дмитрия Ульянова, 20 получает 59 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Пешеходный трафик: 89 из 100 — 17 из 18 баллов",
+        "Спрос в доставке: 240 заказов/км² — 11 из 16 баллов",
+        "Доход аудитории: индекс 1.40 — 8 из 10 баллов"
+      ],
+      "constraints": [
+        "Плотность населения: 8 658 чел./км² — недобрано 11 баллов",
+        "Спрос в доставке: 240 заказов/км² — недобрано 5 баллов"
+      ],
+      "economics": "Прогноз выручки — 4 110 000 ₽ в месяц. Расчётный денежный поток — 230 100 ₽ в месяц, сценарная окупаемость — 35 мес.",
+      "cannibalization": "Риск каннибализации — средний. Ближайший магазин: Ленинский пр-т, 57, расстояние 503 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Отправить адрес на дополнительную проверку экономики, трафика и каннибализации."
+    }
   },
   {
     "zone_id": "z_010",
     "score": 56,
     "revenue_forecast": 4010000,
-    "payback_months": 30,
+    "payback_months": 25,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 241800,
+      "monthlyCashFlow": 330000,
+      "paybackMonths": 25
+    },
     "cannibalization_risk": "medium",
     "nearest_own_store": {
       "store_id": "s_010",
       "distance_m": 759
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "negative",
-        "weight": 0.12
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 43,
+        "displayValue": "43 из 100",
+        "normalizedScore": 31,
+        "maxPoints": 18,
+        "points": 6,
+        "lostPoints": 12
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "positive",
-        "weight": 0.22
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 238,
+        "displayValue": "238 заказов/км²",
+        "normalizedScore": 65,
+        "maxPoints": 16,
+        "points": 10,
+        "lostPoints": 6
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "negative",
-        "weight": 0.27
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 11813,
+        "displayValue": "11 813 чел./км²",
+        "normalizedScore": 37,
+        "maxPoints": 14,
+        "points": 5,
+        "lostPoints": 9
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "negative",
-        "weight": 0.25
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 1.27,
+        "displayValue": "индекс 1.27",
+        "normalizedScore": 63,
+        "maxPoints": 10,
+        "points": 6,
+        "lostPoints": 4
       },
       {
-        "factor": "Близость метро",
-        "impact": "positive",
-        "weight": 0.55
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 359,
+        "displayValue": "359 м",
+        "normalizedScore": 85,
+        "maxPoints": 10,
+        "points": 8,
+        "lostPoints": 2
       },
       {
-        "factor": "Новая застройка",
-        "impact": "positive",
-        "weight": 0.17
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 1,
+        "displayValue": "1 в радиусе 300 м",
+        "normalizedScore": 83,
+        "maxPoints": 9,
+        "points": 8,
+        "lostPoints": 1
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "positive",
-        "weight": 0.4
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 2,
+        "displayValue": "2 проекта рядом",
+        "normalizedScore": 50,
+        "maxPoints": 8,
+        "points": 4,
+        "lostPoints": 4
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "positive",
-        "weight": 0.13
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 2418,
+        "displayValue": "2 418 ₽/м²",
+        "normalizedScore": 87,
+        "maxPoints": 8,
+        "points": 7,
+        "lostPoints": 1
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "positive",
-        "weight": 0.51
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 35,
+        "displayValue": "35 из 100",
+        "normalizedScore": 27,
+        "maxPoints": 7,
+        "points": 2,
+        "lostPoints": 5
       }
     ],
-    "explanation_text": "Профсоюзная ул., 43 получает 56 баллов: сильнее всего помогают близость метро и ставка аренды. Главное ограничение — пешеходный трафик. Риск каннибализации оценивается как средний."
+    "recommendation": {
+      "verdict": "Требуется дополнительная проверка",
+      "summary": "Профсоюзная ул., 43 получает 56 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Спрос в доставке: 238 заказов/км² — 10 из 16 баллов",
+        "Близость метро: 359 м — 8 из 10 баллов",
+        "Конкуренты рядом: 1 в радиусе 300 м — 8 из 9 баллов"
+      ],
+      "constraints": [
+        "Пешеходный трафик: 43 из 100 — недобрано 12 баллов",
+        "Плотность населения: 11 813 чел./км² — недобрано 9 баллов"
+      ],
+      "economics": "Прогноз выручки — 4 010 000 ₽ в месяц. Расчётный денежный поток — 330 000 ₽ в месяц, сценарная окупаемость — 25 мес.",
+      "cannibalization": "Риск каннибализации — средний. Ближайший магазин: Новочерёмушкинская ул., 44, расстояние 759 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Отправить адрес на дополнительную проверку экономики, трафика и каннибализации."
+    }
   },
   {
     "zone_id": "z_011",
     "score": 60,
     "revenue_forecast": 4130000,
-    "payback_months": 30,
+    "payback_months": 35,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 362200,
+      "monthlyCashFlow": 231200,
+      "paybackMonths": 35
+    },
     "cannibalization_risk": "medium",
     "nearest_own_store": {
       "store_id": "s_011",
       "distance_m": 700
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "negative",
-        "weight": 0.52
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 74,
+        "displayValue": "74 из 100",
+        "normalizedScore": 72,
+        "maxPoints": 18,
+        "points": 13,
+        "lostPoints": 5
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "positive",
-        "weight": 0.12
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 232,
+        "displayValue": "232 заказов/км²",
+        "normalizedScore": 63,
+        "maxPoints": 16,
+        "points": 10,
+        "lostPoints": 6
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "positive",
-        "weight": 0.42
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 6754,
+        "displayValue": "6 754 чел./км²",
+        "normalizedScore": 13,
+        "maxPoints": 14,
+        "points": 2,
+        "lostPoints": 12
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "negative",
-        "weight": 0.12
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 1.08,
+        "displayValue": "индекс 1.08",
+        "normalizedScore": 42,
+        "maxPoints": 10,
+        "points": 4,
+        "lostPoints": 6
       },
       {
-        "factor": "Близость метро",
-        "impact": "positive",
-        "weight": 0.72
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 203,
+        "displayValue": "203 м",
+        "normalizedScore": 94,
+        "maxPoints": 10,
+        "points": 9,
+        "lostPoints": 1
       },
       {
-        "factor": "Новая застройка",
-        "impact": "positive",
-        "weight": 0.83
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 2,
+        "displayValue": "2 в радиусе 300 м",
+        "normalizedScore": 67,
+        "maxPoints": 9,
+        "points": 6,
+        "lostPoints": 3
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "positive",
-        "weight": 0.37
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 4,
+        "displayValue": "4 проекта рядом",
+        "normalizedScore": 100,
+        "maxPoints": 8,
+        "points": 8,
+        "lostPoints": 0
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "negative",
-        "weight": 0.13
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 3622,
+        "displayValue": "3 622 ₽/м²",
+        "normalizedScore": 61,
+        "maxPoints": 8,
+        "points": 5,
+        "lostPoints": 3
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "positive",
-        "weight": 0.17
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 48,
+        "displayValue": "48 из 100",
+        "normalizedScore": 44,
+        "maxPoints": 7,
+        "points": 3,
+        "lostPoints": 4
       }
     ],
-    "explanation_text": "Шереметьевская ул., 20 получает 60 баллов: сильнее всего помогают новая застройка и близость метро. Главное ограничение — плотность населения. Риск каннибализации оценивается как средний."
+    "recommendation": {
+      "verdict": "Высокий приоритет для детальной проверки",
+      "summary": "Шереметьевская ул., 20 получает 60 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Пешеходный трафик: 74 из 100 — 13 из 18 баллов",
+        "Спрос в доставке: 232 заказов/км² — 10 из 16 баллов",
+        "Близость метро: 203 м — 9 из 10 баллов"
+      ],
+      "constraints": [
+        "Плотность населения: 6 754 чел./км² — недобрано 12 баллов",
+        "Спрос в доставке: 232 заказов/км² — недобрано 6 баллов"
+      ],
+      "economics": "Прогноз выручки — 4 130 000 ₽ в месяц. Расчётный денежный поток — 231 200 ₽ в месяц, сценарная окупаемость — 35 мес.",
+      "cannibalization": "Риск каннибализации — средний. Ближайший магазин: Сущёвский Вал, 23, расстояние 700 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Рассматривать адрес в приоритетном порядке и перейти к проверке помещения."
+    }
   },
   {
     "zone_id": "z_012",
     "score": 47,
     "revenue_forecast": 3720000,
-    "payback_months": 30,
+    "payback_months": null,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 523400,
+      "monthlyCashFlow": -3800,
+      "paybackMonths": null
+    },
     "cannibalization_risk": "low",
     "nearest_own_store": {
       "store_id": "s_012",
       "distance_m": 1270
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "positive",
-        "weight": 0.75
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 38,
+        "displayValue": "38 из 100",
+        "normalizedScore": 24,
+        "maxPoints": 18,
+        "points": 4,
+        "lostPoints": 14
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "negative",
-        "weight": 0.18
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 231,
+        "displayValue": "231 заказов/км²",
+        "normalizedScore": 63,
+        "maxPoints": 16,
+        "points": 10,
+        "lostPoints": 6
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "negative",
-        "weight": 0.38
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 19466,
+        "displayValue": "19 466 чел./км²",
+        "normalizedScore": 74,
+        "maxPoints": 14,
+        "points": 10,
+        "lostPoints": 4
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "negative",
-        "weight": 0.33
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 0.87,
+        "displayValue": "индекс 0.87",
+        "normalizedScore": 19,
+        "maxPoints": 10,
+        "points": 2,
+        "lostPoints": 8
       },
       {
-        "factor": "Близость метро",
-        "impact": "positive",
-        "weight": 0.63
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 282,
+        "displayValue": "282 м",
+        "normalizedScore": 89,
+        "maxPoints": 10,
+        "points": 9,
+        "lostPoints": 1
       },
       {
-        "factor": "Новая застройка",
-        "impact": "negative",
-        "weight": 0.17
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 2,
+        "displayValue": "2 в радиусе 300 м",
+        "normalizedScore": 67,
+        "maxPoints": 9,
+        "points": 6,
+        "lostPoints": 3
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "positive",
-        "weight": 0.37
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 1,
+        "displayValue": "1 проект рядом",
+        "normalizedScore": 25,
+        "maxPoints": 8,
+        "points": 2,
+        "lostPoints": 6
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "negative",
-        "weight": 0.13
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 5234,
+        "displayValue": "5 234 ₽/м²",
+        "normalizedScore": 27,
+        "maxPoints": 8,
+        "points": 2,
+        "lostPoints": 6
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "negative",
-        "weight": 0.3
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 30,
+        "displayValue": "30 из 100",
+        "normalizedScore": 20,
+        "maxPoints": 7,
+        "points": 2,
+        "lostPoints": 5
       }
     ],
-    "explanation_text": "Авиамоторная ул., 14 получает 47 баллов: сильнее всего помогают плотность населения и близость метро. Главное ограничение — пешеходный трафик. Риск каннибализации оценивается как низкий."
+    "recommendation": {
+      "verdict": "Низкий приоритет в текущем сценарии",
+      "summary": "Авиамоторная ул., 14 получает 47 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Спрос в доставке: 231 заказов/км² — 10 из 16 баллов",
+        "Плотность населения: 19 466 чел./км² — 10 из 14 баллов",
+        "Близость метро: 282 м — 9 из 10 баллов"
+      ],
+      "constraints": [
+        "Пешеходный трафик: 38 из 100 — недобрано 14 баллов",
+        "Доход аудитории: индекс 0.87 — недобрано 8 баллов"
+      ],
+      "economics": "Прогноз выручки — 3 720 000 ₽ в месяц. При заданных допущениях денежный поток составляет -3 800 ₽, поэтому точка не окупается.",
+      "cannibalization": "Риск каннибализации — низкий. Ближайший магазин: Солдатская ул., 6, расстояние 1 270 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Понизить приоритет адреса до устранения ключевых ограничений."
+    }
   },
   {
     "zone_id": "z_013",
     "score": 44,
     "revenue_forecast": 3490000,
-    "payback_months": 30,
+    "payback_months": 41,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 282700,
+      "monthlyCashFlow": 195500,
+      "paybackMonths": 41
+    },
     "cannibalization_risk": "medium",
     "nearest_own_store": {
       "store_id": "s_013",
       "distance_m": 776
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "positive",
-        "weight": 0.49
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 36,
+        "displayValue": "36 из 100",
+        "normalizedScore": 21,
+        "maxPoints": 18,
+        "points": 4,
+        "lostPoints": 14
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "positive",
-        "weight": 0.14
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 152,
+        "displayValue": "152 заказов/км²",
+        "normalizedScore": 38,
+        "maxPoints": 16,
+        "points": 6,
+        "lostPoints": 10
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "negative",
-        "weight": 0.42
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 16862,
+        "displayValue": "16 862 чел./км²",
+        "normalizedScore": 61,
+        "maxPoints": 14,
+        "points": 9,
+        "lostPoints": 5
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "positive",
-        "weight": 0.45
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 1.19,
+        "displayValue": "индекс 1.19",
+        "normalizedScore": 54,
+        "maxPoints": 10,
+        "points": 5,
+        "lostPoints": 5
       },
       {
-        "factor": "Близость метро",
-        "impact": "negative",
-        "weight": 0.68
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 1461,
+        "displayValue": "1 461 м",
+        "normalizedScore": 20,
+        "maxPoints": 10,
+        "points": 2,
+        "lostPoints": 8
       },
       {
-        "factor": "Новая застройка",
-        "impact": "negative",
-        "weight": 0.17
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 3,
+        "displayValue": "3 в радиусе 300 м",
+        "normalizedScore": 50,
+        "maxPoints": 9,
+        "points": 4,
+        "lostPoints": 5
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "positive",
-        "weight": 0.12
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 1,
+        "displayValue": "1 проект рядом",
+        "normalizedScore": 25,
+        "maxPoints": 8,
+        "points": 2,
+        "lostPoints": 6
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "negative",
-        "weight": 0.38
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 2827,
+        "displayValue": "2 827 ₽/м²",
+        "normalizedScore": 78,
+        "maxPoints": 8,
+        "points": 6,
+        "lostPoints": 2
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "positive",
-        "weight": 0.39
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 77,
+        "displayValue": "77 из 100",
+        "normalizedScore": 83,
+        "maxPoints": 7,
+        "points": 6,
+        "lostPoints": 1
       }
     ],
-    "explanation_text": "Русаковская ул., 24 получает 44 баллов: сильнее всего помогают плотность населения и автомобильный трафик. Главное ограничение — близость метро. Риск каннибализации оценивается как средний."
+    "recommendation": {
+      "verdict": "Низкий приоритет в текущем сценарии",
+      "summary": "Русаковская ул., 24 получает 44 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Плотность населения: 16 862 чел./км² — 9 из 14 баллов",
+        "Спрос в доставке: 152 заказов/км² — 6 из 16 баллов",
+        "Ставка аренды: 2 827 ₽/м² — 6 из 8 баллов"
+      ],
+      "constraints": [
+        "Пешеходный трафик: 36 из 100 — недобрано 14 баллов",
+        "Спрос в доставке: 152 заказов/км² — недобрано 10 баллов"
+      ],
+      "economics": "Прогноз выручки — 3 490 000 ₽ в месяц. Расчётный денежный поток — 195 500 ₽ в месяц, сценарная окупаемость — 41 мес.",
+      "cannibalization": "Риск каннибализации — средний. Ближайший магазин: Стромынка, 14, расстояние 776 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Понизить приоритет адреса до устранения ключевых ограничений."
+    }
   },
   {
     "zone_id": "z_014",
     "score": 58,
     "revenue_forecast": 4210000,
-    "payback_months": 30,
+    "payback_months": 45,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 427900,
+      "monthlyCashFlow": 179900,
+      "paybackMonths": 45
+    },
     "cannibalization_risk": "medium",
     "nearest_own_store": {
       "store_id": "s_014",
       "distance_m": 681
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "positive",
-        "weight": 0.65
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 71,
+        "displayValue": "71 из 100",
+        "normalizedScore": 68,
+        "maxPoints": 18,
+        "points": 12,
+        "lostPoints": 6
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "negative",
-        "weight": 0.12
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 312,
+        "displayValue": "312 заказов/км²",
+        "normalizedScore": 88,
+        "maxPoints": 16,
+        "points": 14,
+        "lostPoints": 2
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "positive",
-        "weight": 0.36
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 18474,
+        "displayValue": "18 474 чел./км²",
+        "normalizedScore": 69,
+        "maxPoints": 14,
+        "points": 10,
+        "lostPoints": 4
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "positive",
-        "weight": 0.55
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 1.04,
+        "displayValue": "индекс 1.04",
+        "normalizedScore": 38,
+        "maxPoints": 10,
+        "points": 4,
+        "lostPoints": 6
       },
       {
-        "factor": "Близость метро",
-        "impact": "negative",
-        "weight": 0.41
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 1219,
+        "displayValue": "1 219 м",
+        "normalizedScore": 34,
+        "maxPoints": 10,
+        "points": 3,
+        "lostPoints": 7
       },
       {
-        "factor": "Новая застройка",
-        "impact": "negative",
-        "weight": 0.5
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 3,
+        "displayValue": "3 в радиусе 300 м",
+        "normalizedScore": 50,
+        "maxPoints": 9,
+        "points": 5,
+        "lostPoints": 4
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "positive",
-        "weight": 0.74
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 0,
+        "displayValue": "0 проектов рядом",
+        "normalizedScore": 0,
+        "maxPoints": 8,
+        "points": 0,
+        "lostPoints": 8
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "negative",
-        "weight": 0.38
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 4279,
+        "displayValue": "4 279 ₽/м²",
+        "normalizedScore": 47,
+        "maxPoints": 8,
+        "points": 4,
+        "lostPoints": 4
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "negative",
-        "weight": 0.12
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 83,
+        "displayValue": "83 из 100",
+        "normalizedScore": 91,
+        "maxPoints": 7,
+        "points": 6,
+        "lostPoints": 1
       }
     ],
-    "explanation_text": "Олимпийский проспект, 16 получает 58 баллов: сильнее всего помогают спрос в доставке и плотность населения. Главное ограничение — новая застройка. Риск каннибализации оценивается как средний."
+    "recommendation": {
+      "verdict": "Требуется дополнительная проверка",
+      "summary": "Олимпийский проспект, 16 получает 58 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Спрос в доставке: 312 заказов/км² — 14 из 16 баллов",
+        "Пешеходный трафик: 71 из 100 — 12 из 18 баллов",
+        "Плотность населения: 18 474 чел./км² — 10 из 14 баллов"
+      ],
+      "constraints": [
+        "Новая застройка: 0 проектов рядом — недобрано 8 баллов",
+        "Близость метро: 1 219 м — недобрано 7 баллов"
+      ],
+      "economics": "Прогноз выручки — 4 210 000 ₽ в месяц. Расчётный денежный поток — 179 900 ₽ в месяц, сценарная окупаемость — 45 мес.",
+      "cannibalization": "Риск каннибализации — средний. Ближайший магазин: Проспект Мира, 40, расстояние 681 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Отправить адрес на дополнительную проверку экономики, трафика и каннибализации."
+    }
   },
   {
     "zone_id": "z_015",
     "score": 54,
     "revenue_forecast": 3660000,
-    "payback_months": 30,
+    "payback_months": 63,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 381500,
+      "monthlyCashFlow": 127300,
+      "paybackMonths": 63
+    },
     "cannibalization_risk": "medium",
     "nearest_own_store": {
       "store_id": "s_015",
       "distance_m": 890
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "negative",
-        "weight": 0.24
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 76,
+        "displayValue": "76 из 100",
+        "normalizedScore": 75,
+        "maxPoints": 18,
+        "points": 13,
+        "lostPoints": 5
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "positive",
-        "weight": 0.21
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 74,
+        "displayValue": "74 заказов/км²",
+        "normalizedScore": 14,
+        "maxPoints": 16,
+        "points": 2,
+        "lostPoints": 14
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "positive",
-        "weight": 0.47
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 9556,
+        "displayValue": "9 556 чел./км²",
+        "normalizedScore": 26,
+        "maxPoints": 14,
+        "points": 4,
+        "lostPoints": 10
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "positive",
-        "weight": 0.55
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 1.26,
+        "displayValue": "индекс 1.26",
+        "normalizedScore": 62,
+        "maxPoints": 10,
+        "points": 6,
+        "lostPoints": 4
       },
       {
-        "factor": "Близость метро",
-        "impact": "negative",
-        "weight": 0.39
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 1197,
+        "displayValue": "1 197 м",
+        "normalizedScore": 35,
+        "maxPoints": 10,
+        "points": 4,
+        "lostPoints": 6
       },
       {
-        "factor": "Новая застройка",
-        "impact": "positive",
-        "weight": 0.83
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 2,
+        "displayValue": "2 в радиусе 300 м",
+        "normalizedScore": 67,
+        "maxPoints": 9,
+        "points": 6,
+        "lostPoints": 3
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "negative",
-        "weight": 0.35
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 4,
+        "displayValue": "4 проекта рядом",
+        "normalizedScore": 100,
+        "maxPoints": 8,
+        "points": 8,
+        "lostPoints": 0
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "negative",
-        "weight": 0.13
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 3815,
+        "displayValue": "3 815 ₽/м²",
+        "normalizedScore": 57,
+        "maxPoints": 8,
+        "points": 5,
+        "lostPoints": 3
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "positive",
-        "weight": 0.12
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 83,
+        "displayValue": "83 из 100",
+        "normalizedScore": 91,
+        "maxPoints": 7,
+        "points": 6,
+        "lostPoints": 1
       }
     ],
-    "explanation_text": "7-я Кожуховская ул., 9 получает 54 баллов: сильнее всего помогают новая застройка и автомобильный трафик. Главное ограничение — близость метро. Риск каннибализации оценивается как средний."
+    "recommendation": {
+      "verdict": "Требуется дополнительная проверка",
+      "summary": "7-я Кожуховская ул., 9 получает 54 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Пешеходный трафик: 76 из 100 — 13 из 18 баллов",
+        "Новая застройка: 4 проекта рядом — 8 из 8 баллов",
+        "Доход аудитории: индекс 1.26 — 6 из 10 баллов"
+      ],
+      "constraints": [
+        "Спрос в доставке: 74 заказов/км² — недобрано 14 баллов",
+        "Плотность населения: 9 556 чел./км² — недобрано 10 баллов"
+      ],
+      "economics": "Прогноз выручки — 3 660 000 ₽ в месяц. Расчётный денежный поток — 127 300 ₽ в месяц, сценарная окупаемость — 63 мес.",
+      "cannibalization": "Риск каннибализации — средний. Ближайший магазин: Велозаводская ул., 6, расстояние 890 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Отправить адрес на дополнительную проверку экономики, трафика и каннибализации."
+    }
   },
   {
     "zone_id": "z_016",
     "score": 55,
     "revenue_forecast": 3820000,
-    "payback_months": 30,
+    "payback_months": 27,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 235900,
+      "monthlyCashFlow": 301700,
+      "paybackMonths": 27
+    },
     "cannibalization_risk": "medium",
     "nearest_own_store": {
       "store_id": "s_016",
       "distance_m": 719
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "positive",
-        "weight": 0.65
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 70,
+        "displayValue": "70 из 100",
+        "normalizedScore": 67,
+        "maxPoints": 18,
+        "points": 12,
+        "lostPoints": 6
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "negative",
-        "weight": 0.12
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 146,
+        "displayValue": "146 заказов/км²",
+        "normalizedScore": 36,
+        "maxPoints": 16,
+        "points": 6,
+        "lostPoints": 10
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "positive",
-        "weight": 0.33
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 18452,
+        "displayValue": "18 452 чел./км²",
+        "normalizedScore": 69,
+        "maxPoints": 14,
+        "points": 10,
+        "lostPoints": 4
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "positive",
-        "weight": 0.43
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 0.98,
+        "displayValue": "индекс 0.98",
+        "normalizedScore": 31,
+        "maxPoints": 10,
+        "points": 3,
+        "lostPoints": 7
       },
       {
-        "factor": "Близость метро",
-        "impact": "negative",
-        "weight": 0.82
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 1589,
+        "displayValue": "1 589 м",
+        "normalizedScore": 12,
+        "maxPoints": 10,
+        "points": 1,
+        "lostPoints": 9
       },
       {
-        "factor": "Новая застройка",
-        "impact": "positive",
-        "weight": 0.17
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 2,
+        "displayValue": "2 в радиусе 300 м",
+        "normalizedScore": 67,
+        "maxPoints": 9,
+        "points": 6,
+        "lostPoints": 3
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "negative",
-        "weight": 0.12
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 2,
+        "displayValue": "2 проекта рядом",
+        "normalizedScore": 50,
+        "maxPoints": 8,
+        "points": 4,
+        "lostPoints": 4
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "negative",
-        "weight": 0.13
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 2359,
+        "displayValue": "2 359 ₽/м²",
+        "normalizedScore": 88,
+        "maxPoints": 8,
+        "points": 7,
+        "lostPoints": 1
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "positive",
-        "weight": 0.53
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 76,
+        "displayValue": "76 из 100",
+        "normalizedScore": 81,
+        "maxPoints": 7,
+        "points": 6,
+        "lostPoints": 1
       }
     ],
-    "explanation_text": "ул. Народного Ополчения, 21 получает 55 баллов: сильнее всего помогают плотность населения и ставка аренды. Главное ограничение — близость метро. Риск каннибализации оценивается как средний."
+    "recommendation": {
+      "verdict": "Требуется дополнительная проверка",
+      "summary": "ул. Народного Ополчения, 21 получает 55 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Пешеходный трафик: 70 из 100 — 12 из 18 баллов",
+        "Плотность населения: 18 452 чел./км² — 10 из 14 баллов",
+        "Ставка аренды: 2 359 ₽/м² — 7 из 8 баллов"
+      ],
+      "constraints": [
+        "Спрос в доставке: 146 заказов/км² — недобрано 10 баллов",
+        "Близость метро: 1 589 м — недобрано 9 баллов"
+      ],
+      "economics": "Прогноз выручки — 3 820 000 ₽ в месяц. Расчётный денежный поток — 301 700 ₽ в месяц, сценарная окупаемость — 27 мес.",
+      "cannibalization": "Риск каннибализации — средний. Ближайший магазин: Маршала Жукова, 30, расстояние 719 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Отправить адрес на дополнительную проверку экономики, трафика и каннибализации."
+    }
   },
   {
     "zone_id": "z_017",
     "score": 56,
     "revenue_forecast": 4160000,
-    "payback_months": 30,
+    "payback_months": 285,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 570700,
+      "monthlyCashFlow": 28100,
+      "paybackMonths": 285
+    },
     "cannibalization_risk": "low",
     "nearest_own_store": {
       "store_id": "s_017",
       "distance_m": 2004
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "positive",
-        "weight": 0.93
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 51,
+        "displayValue": "51 из 100",
+        "normalizedScore": 41,
+        "maxPoints": 18,
+        "points": 7,
+        "lostPoints": 11
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "negative",
-        "weight": 0.15
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 321,
+        "displayValue": "321 заказов/км²",
+        "normalizedScore": 91,
+        "maxPoints": 16,
+        "points": 15,
+        "lostPoints": 1
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "negative",
-        "weight": 0.12
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 21268,
+        "displayValue": "21 268 чел./км²",
+        "normalizedScore": 82,
+        "maxPoints": 14,
+        "points": 12,
+        "lostPoints": 2
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "positive",
-        "weight": 0.52
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 0.9,
+        "displayValue": "индекс 0.90",
+        "normalizedScore": 22,
+        "maxPoints": 10,
+        "points": 2,
+        "lostPoints": 8
       },
       {
-        "factor": "Близость метро",
-        "impact": "positive",
-        "weight": 0.23
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 646,
+        "displayValue": "646 м",
+        "normalizedScore": 68,
+        "maxPoints": 10,
+        "points": 7,
+        "lostPoints": 3
       },
       {
-        "factor": "Новая застройка",
-        "impact": "positive",
-        "weight": 0.17
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 5,
+        "displayValue": "5 в радиусе 300 м",
+        "normalizedScore": 17,
+        "maxPoints": 9,
+        "points": 2,
+        "lostPoints": 7
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "positive",
-        "weight": 0.78
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 2,
+        "displayValue": "2 проекта рядом",
+        "normalizedScore": 50,
+        "maxPoints": 8,
+        "points": 4,
+        "lostPoints": 4
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "negative",
-        "weight": 0.88
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 5707,
+        "displayValue": "5 707 ₽/м²",
+        "normalizedScore": 17,
+        "maxPoints": 8,
+        "points": 1,
+        "lostPoints": 7
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "negative",
-        "weight": 0.43
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 81,
+        "displayValue": "81 из 100",
+        "normalizedScore": 88,
+        "maxPoints": 7,
+        "points": 6,
+        "lostPoints": 1
       }
     ],
-    "explanation_text": "Нагатинская ул., 16 получает 56 баллов: сильнее всего помогают плотность населения и спрос в доставке. Главное ограничение — конкуренты рядом. Риск каннибализации оценивается как низкий."
+    "recommendation": {
+      "verdict": "Требуется дополнительная проверка",
+      "summary": "Нагатинская ул., 16 получает 56 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Спрос в доставке: 321 заказов/км² — 15 из 16 баллов",
+        "Плотность населения: 21 268 чел./км² — 12 из 14 баллов",
+        "Пешеходный трафик: 51 из 100 — 7 из 18 баллов"
+      ],
+      "constraints": [
+        "Пешеходный трафик: 51 из 100 — недобрано 11 баллов",
+        "Доход аудитории: индекс 0.90 — недобрано 8 баллов"
+      ],
+      "economics": "Прогноз выручки — 4 160 000 ₽ в месяц. Расчётный денежный поток — 28 100 ₽ в месяц, сценарная окупаемость — 285 мес.",
+      "cannibalization": "Риск каннибализации — низкий. Ближайший магазин: Каширское ш., 28, расстояние 2 004 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Отправить адрес на дополнительную проверку экономики, трафика и каннибализации."
+    }
   },
   {
     "zone_id": "z_018",
     "score": 44,
     "revenue_forecast": 3320000,
-    "payback_months": 30,
+    "payback_months": null,
+    "economics": {
+      "assumptions": {
+        "storeAreaSqm": 100,
+        "launchInvestment": 8000000,
+        "operatingMarginBeforeRent": 0.18,
+        "otherFixedCosts": 150000
+      },
+      "monthlyRent": 557500,
+      "monthlyCashFlow": -109900,
+      "paybackMonths": null
+    },
     "cannibalization_risk": "medium",
     "nearest_own_store": {
       "store_id": "s_018",
       "distance_m": 624
     },
-    "factor_contributions": [
+    "factor_breakdown": [
       {
-        "factor": "Плотность населения",
-        "impact": "positive",
-        "weight": 0.53
+        "key": "foot_traffic_score",
+        "label": "Пешеходный трафик",
+        "rawValue": 80,
+        "displayValue": "80 из 100",
+        "normalizedScore": 80,
+        "maxPoints": 18,
+        "points": 14,
+        "lostPoints": 4
       },
       {
-        "factor": "Доход аудитории",
-        "impact": "positive",
-        "weight": 0.12
+        "key": "delivery_orders_density",
+        "label": "Спрос в доставке",
+        "rawValue": 61,
+        "displayValue": "61 заказов/км²",
+        "normalizedScore": 10,
+        "maxPoints": 16,
+        "points": 1,
+        "lostPoints": 15
       },
       {
-        "factor": "Пешеходный трафик",
-        "impact": "positive",
-        "weight": 0.56
+        "key": "population_density",
+        "label": "Плотность населения",
+        "rawValue": 17272,
+        "displayValue": "17 272 чел./км²",
+        "normalizedScore": 63,
+        "maxPoints": 14,
+        "points": 9,
+        "lostPoints": 5
       },
       {
-        "factor": "Автомобильный трафик",
-        "impact": "positive",
-        "weight": 0.63
+        "key": "avg_income_index",
+        "label": "Доход аудитории",
+        "rawValue": 1.09,
+        "displayValue": "индекс 1.09",
+        "normalizedScore": 43,
+        "maxPoints": 10,
+        "points": 4,
+        "lostPoints": 6
       },
       {
-        "factor": "Близость метро",
-        "impact": "negative",
-        "weight": 0.7
+        "key": "distance_to_metro_m",
+        "label": "Близость метро",
+        "rawValue": 1481,
+        "displayValue": "1 481 м",
+        "normalizedScore": 19,
+        "maxPoints": 10,
+        "points": 2,
+        "lostPoints": 8
       },
       {
-        "factor": "Новая застройка",
-        "impact": "negative",
-        "weight": 0.17
+        "key": "competitors_count_300m",
+        "label": "Конкуренты рядом",
+        "rawValue": 4,
+        "displayValue": "4 в радиусе 300 м",
+        "normalizedScore": 33,
+        "maxPoints": 9,
+        "points": 3,
+        "lostPoints": 6
       },
       {
-        "factor": "Спрос в доставке",
-        "impact": "negative",
-        "weight": 0.4
+        "key": "new_developments_nearby",
+        "label": "Новая застройка",
+        "rawValue": 1,
+        "displayValue": "1 проект рядом",
+        "normalizedScore": 25,
+        "maxPoints": 8,
+        "points": 2,
+        "lostPoints": 6
       },
       {
-        "factor": "Конкуренты рядом",
-        "impact": "negative",
-        "weight": 0.63
+        "key": "rent_price_per_sqm",
+        "label": "Ставка аренды",
+        "rawValue": 5575,
+        "displayValue": "5 575 ₽/м²",
+        "normalizedScore": 20,
+        "maxPoints": 8,
+        "points": 2,
+        "lostPoints": 6
       },
       {
-        "factor": "Ставка аренды",
-        "impact": "negative",
-        "weight": 0.39
+        "key": "car_traffic_score",
+        "label": "Автомобильный трафик",
+        "rawValue": 88,
+        "displayValue": "88 из 100",
+        "normalizedScore": 97,
+        "maxPoints": 7,
+        "points": 7,
+        "lostPoints": 0
       }
     ],
-    "explanation_text": "Первомайская ул., 42 получает 44 баллов: сильнее всего помогают автомобильный трафик и пешеходный трафик. Главное ограничение — близость метро. Риск каннибализации оценивается как средний."
+    "recommendation": {
+      "verdict": "Низкий приоритет в текущем сценарии",
+      "summary": "Первомайская ул., 42 получает 44 из 100 баллов по девяти факторам модели-гипотезы.",
+      "drivers": [
+        "Пешеходный трафик: 80 из 100 — 14 из 18 баллов",
+        "Плотность населения: 17 272 чел./км² — 9 из 14 баллов",
+        "Автомобильный трафик: 88 из 100 — 7 из 7 баллов"
+      ],
+      "constraints": [
+        "Спрос в доставке: 61 заказов/км² — недобрано 15 баллов",
+        "Близость метро: 1 481 м — недобрано 8 баллов"
+      ],
+      "economics": "Прогноз выручки — 3 320 000 ₽ в месяц. При заданных допущениях денежный поток составляет -109 900 ₽, поэтому точка не окупается.",
+      "cannibalization": "Риск каннибализации — средний. Ближайший магазин: 9-я Парковая ул., 32, расстояние 624 м. Чем ближе сильная действующая точка, тем выше риск перераспределения спроса внутри сети.",
+      "manualChecks": [
+        "Подтвердить коммерческие условия и фактическую площадь помещения.",
+        "Провести ручной замер пешеходного и автомобильного трафика.",
+        "Проверить доступность входа, разгрузки и заметность помещения.",
+        "Оценить влияние открытия на выручку ближайшего магазина."
+      ],
+      "action": "Понизить приоритет адреса до устранения ключевых ограничений."
+    }
   }
 ]

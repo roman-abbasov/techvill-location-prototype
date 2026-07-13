@@ -1,11 +1,24 @@
 import { afterEach, expect, it, vi } from 'vitest';
-import { loadYandexMaps, resetYandexMapsLoader } from '../src/components/PotentialMap.jsx';
+import { buildHeatmapData, loadYandexMaps, resetYandexMapsLoader } from '../src/components/PotentialMap.jsx';
 
 afterEach(() => {
   document.head.querySelectorAll('script[data-yandex-maps], script[data-yandex-heatmap]').forEach((script) => script.remove());
   delete window.ymaps;
   resetYandexMapsLoader();
   vi.restoreAllMocks();
+});
+
+it('builds a normalized interpolated field while retaining source points', () => {
+  const zonesById = new Map([
+    ['a', { center_lat: 55.7, center_lng: 37.5 }],
+    ['b', { center_lat: 55.8, center_lng: 37.7 }],
+  ]);
+  const data = buildHeatmapData([{ zone_id: 'a', score: 40 }, { zone_id: 'b', score: 60 }], zonesById, 6);
+
+  expect(data.features.length).toBeGreaterThan(30);
+  expect(data.features.filter((feature) => feature.properties.source)).toHaveLength(2);
+  expect(Math.min(...data.features.map((feature) => feature.properties.weight))).toBeCloseTo(0.1, 1);
+  expect(Math.max(...data.features.map((feature) => feature.properties.weight))).toBe(1);
 });
 
 it('loads the official Heatmap module before resolving Yandex Maps', async () => {

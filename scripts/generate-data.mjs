@@ -1,6 +1,6 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { calculateCannibalizationRisk, calculateScore } from '../src/domain/scoring.js';
+import { buildRecommendation, calculateCannibalizationRisk, calculateEconomics, calculateScoreBreakdown } from '../src/domain/scoring.js';
 
 const locations = [
   ['Хамовники', 'Комсомольский проспект, 28', 55.7279, 37.5773],
@@ -91,10 +91,11 @@ export function generateDataset(seed = 20260713) {
   const stores = storeLocations.map(([address,lat,lng], i) => ({ store_id:`s_${String(i+1).padStart(3,'0')}`, lat, lng, address_label:address, opened_date:`202${i%5}-0${i%9+1}-01`, monthly_revenue:between(random,2400000,5900000), features:features(random) }));
   const scores = zones.map((zone) => {
     const nearest = stores.map((store)=>({store,distance:haversine(zone.center_lat,zone.center_lng,store.lat,store.lng)})).sort((a,b)=>a.distance-b.distance)[0];
-    const score=calculateScore(zone.features); const risk=calculateCannibalizationRisk(nearest.store.monthly_revenue,nearest.distance); const factors=contributions(zone.features);
-    const revenue=Math.round((1850000+score*31000+zone.features.delivery_orders_density*1800)/10000)*10000;
-    const payback=Math.max(8,Math.min(30,Math.round((35000000+zone.features.rent_price_per_sqm*1800)/(revenue*0.24))));
-    return { zone_id:zone.zone_id, score, revenue_forecast:revenue, payback_months:payback, cannibalization_risk:risk, nearest_own_store:{store_id:nearest.store.store_id,distance_m:Math.round(nearest.distance)}, factor_contributions:factors, explanation_text:explanation(zone,score,factors,risk) };
+    const breakdown=calculateScoreBreakdown(zone.features); const risk=calculateCannibalizationRisk(nearest.store.monthly_revenue,nearest.distance);
+    const revenue=Math.round((1850000+breakdown.score*31000+zone.features.delivery_orders_density*1800)/10000)*10000;
+    const economics=calculateEconomics(zone.features,revenue);
+    const recommendation=buildRecommendation({zone,breakdown,economics,revenueForecast:revenue,risk,nearestStore:nearest.store,distanceM:Math.round(nearest.distance)});
+    return { zone_id:zone.zone_id, score:breakdown.score, revenue_forecast:revenue, payback_months:economics.paybackMonths, economics, cannibalization_risk:risk, nearest_own_store:{store_id:nearest.store.store_id,distance_m:Math.round(nearest.distance)}, factor_breakdown:breakdown.factors, recommendation };
   });
   return { zones, stores, scores };
 }
