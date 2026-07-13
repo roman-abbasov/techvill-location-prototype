@@ -47,3 +47,11 @@ it('switches between assignment and prototype without navigation', async () => {
   await userEvent.click(screen.getByRole('tab', { name: 'Прототип' }));
   expect(screen.getByRole('heading', { name: /Потенциал новых точек/i })).toBeInTheDocument();
 });
+
+it('opens the tools and knowledge page from the third tab', async () => {
+  render(<App />);
+
+  await userEvent.click(screen.getByRole('tab', { name: 'Использованные инструменты и знания' }));
+
+  expect(screen.getByRole('heading', { name: 'Использованные инструменты и знания' })).toBeInTheDocument();
+});

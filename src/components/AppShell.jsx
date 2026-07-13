@@ -12,7 +12,7 @@ export default function AppShell({ activeTab, onTabChange, children }) {
           </span>
         </a>
         <nav className="tabs" role="tablist" aria-label="Разделы проекта">
-          {['Задание', 'Прототип'].map((tab) => (
+          {['Задание', 'Прототип', 'Использованные инструменты и знания'].map((tab) => (
             <button
               key={tab}
               type="button"
