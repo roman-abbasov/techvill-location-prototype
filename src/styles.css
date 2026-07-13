@@ -99,6 +99,20 @@ h1,h2{letter-spacing:-.035em;font-weight:600}
 .disclaimer-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:var(--purple);color:#fff;font-weight:800}
 .concept-disclaimer h2{margin:0 0 7px;font-size:17px;letter-spacing:0}
 .concept-disclaimer p{margin:0;max-width:1220px;color:#4d4d4d;font-size:13px;line-height:1.55}
+.prototype-disclaimer{
+  display:grid;
+  grid-template-columns:42px 1fr;
+  gap:18px;
+  margin:0 0 24px;
+  padding:22px clamp(20px,3vw,34px);
+  border:1px solid var(--line);
+  border-left:6px solid var(--purple);
+  border-radius:20px;
+  background:#fff;
+  box-shadow:0 8px 24px rgba(23,23,23,.05);
+}
+.prototype-disclaimer h2{margin:0 0 7px;font-size:17px;letter-spacing:0}
+.prototype-disclaimer p{margin:0;color:#4d4d4d;font-size:13px;line-height:1.55}
 
 .assignment-page,.prototype-page{max-width:1450px}
 .hero{min-height:610px;margin:28px clamp(12px,2vw,28px) 0;padding:clamp(52px,7vw,92px);border-radius:36px;background:#fff}
@@ -161,6 +175,7 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{ou
   .tabs{order:3;width:100%}
   .tabs button{flex:1}
   .concept-disclaimer{width:calc(100% - 20px);grid-template-columns:1fr;margin-top:20px;padding:19px;border-radius:18px}
+  .prototype-disclaimer{grid-template-columns:1fr;padding:19px;border-radius:18px}
   .disclaimer-mark{width:32px;height:32px}
   .hero,.content-section,.conclusion{margin-inline:10px;border-radius:24px;padding-inline:22px}
   .ai-flow article{margin:0 0 12px}

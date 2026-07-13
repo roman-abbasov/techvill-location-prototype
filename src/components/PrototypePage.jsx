@@ -18,7 +18,14 @@ export default function PrototypePage({ initialData = null }) {
   useEffect(() => { if (selectedZoneId && !filteredScores.some((score) => score.zone_id === selectedZoneId)) setSelectedZoneId(null); }, [filteredScores, selectedZoneId]);
   const selectedScore = filteredScores.find((score) => score.zone_id === selectedZoneId);
   return <div className="prototype-page" id="panel-Прототип" role="tabpanel">
-    <header className="prototype-intro"><div><p className="eyebrow">AI location intelligence</p><h1>Потенциал новых точек</h1></div><div className="model-note"><span className="live-dot" /> Модель рассчитана <b>offline</b></div></header>
+    <header className="prototype-intro"><div><h1>Потенциал новых точек</h1></div><div className="model-note"><span className="live-dot" /> Модель рассчитана <b>offline</b></div></header>
+    <aside className="prototype-disclaimer" aria-labelledby="prototype-disclaimer-title">
+      <span className="disclaimer-mark" aria-hidden="true">i</span>
+      <div>
+        <h2 id="prototype-disclaimer-title">Важно о прототипе</h2>
+        <p>Здесь я подтянул Яндекс API со своим ключом и хотел наиболее наглядно продемонстрировать прототип. Помимо прочего пытался на основе <strong>Yandex Maps API Heatmap Module</strong> отрисовать именно тепловую карту. Далеко от идеала (я не программист), но я уверен с командой на обсуждении можно будет прийти либо к такому, но более приемлемому варианту либо вообще пересмотреть формат отображения и отрисовки</p>
+      </div>
+    </aside>
     {error && <section className="load-state"><h2>Не удалось загрузить данные</h2><p>{error}</p></section>}
     {!data && !error && <section className="load-state"><p>Загружаем геоданные…</p></section>}
     {data && <>

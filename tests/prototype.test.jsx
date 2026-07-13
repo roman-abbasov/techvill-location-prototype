@@ -30,3 +30,14 @@ it('does not imitate a live LLM request', async () => {
   await userEvent.click(screen.getByRole('button', { name: /открыть локацию/i }));
   expect(screen.queryByRole('button', { name: /сформировать ии-объяснение/i })).not.toBeInTheDocument();
 });
+
+it('explains the limitations of the map prototype', () => {
+  render(<PrototypePage initialData={fixtureData} />);
+
+  expect(screen.queryByText('AI location intelligence')).not.toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: 'Важно о прототипе' })).toBeInTheDocument();
+  expect(screen.getByText('Yandex Maps API Heatmap Module').tagName).toBe('STRONG');
+  expect(screen.getByText(/Здесь я подтянул Яндекс API со своим ключом/)).toHaveTextContent(
+    'Здесь я подтянул Яндекс API со своим ключом и хотел наиболее наглядно продемонстрировать прототип. Помимо прочего пытался на основе Yandex Maps API Heatmap Module отрисовать именно тепловую карту. Далеко от идеала (я не программист), но я уверен с командой на обсуждении можно будет прийти либо к такому, но более приемлемому варианту либо вообще пересмотреть формат отображения и отрисовки',
+  );
+});

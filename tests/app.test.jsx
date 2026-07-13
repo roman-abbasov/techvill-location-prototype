@@ -26,12 +26,15 @@ it('renders the approved branding and exactly the ten source sections', () => {
     'Как это будет выглядеть',
     'Как это может работать (без глубоких технических деталей)',
     'Этапы проекта',
-    'Роль Project Manager AI',
+    'Моя роль как Project Manager AI',
     'Риски',
     'Итог',
   ].forEach((heading) => {
     expect(screen.getByRole('heading', { name: heading })).toBeInTheDocument();
   });
+
+  expect(screen.getByText(/08 · Моя прямая ответственность/)).toBeInTheDocument();
+  expect(screen.getByText('Я являюсь связующим звеном между отделом развития, командой модели, руководством и иными заказчиками и заинтересованными лицами')).toBeInTheDocument();
 
   expect(screen.queryByText('AI location intelligence')).not.toBeInTheDocument();
   expect(screen.queryByText('PM AI · demo')).not.toBeInTheDocument();

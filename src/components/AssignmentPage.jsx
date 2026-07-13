@@ -78,7 +78,7 @@ export default function AssignmentPage() {
       </section>
 
       <section className="content-section pm-section">
-        <div><SectionLabel number="08">Ответственность</SectionLabel><h2>Роль Project Manager AI</h2><p>PM AI становится связующим звеном между отделом развития, командой модели и руководством.</p></div>
+        <div><SectionLabel number="08">Моя прямая ответственность</SectionLabel><h2>Моя роль как Project Manager AI</h2><p>Я являюсь связующим звеном между отделом развития, командой модели, руководством и иными заказчиками и заинтересованными лицами</p></div>
         <ul className="pm-list">{pmResponsibilities.map((item) => <li key={item}>{item}</li>)}</ul>
       </section>
 
