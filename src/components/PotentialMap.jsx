@@ -6,16 +6,23 @@ let mapsPromise;
 export function resetYandexMapsLoader() { mapsPromise = undefined; }
 
 export function loadYandexMaps(apiKey) {
-  if (window.ymaps) return Promise.resolve(window.ymaps);
   if (mapsPromise) return mapsPromise;
-  mapsPromise = new Promise((resolve, reject) => {
+  const mapsApiPromise = window.ymaps ? Promise.resolve(window.ymaps) : new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.dataset.yandexMaps = 'true';
+      script.src = `https://api-maps.yandex.ru/2.1/?apikey=${encodeURIComponent(apiKey)}&lang=ru_RU`;
+      script.onload = () => window.ymaps ? window.ymaps.ready(() => resolve(window.ymaps)) : reject(new Error('API не инициализирован'));
+      script.onerror = () => reject(new Error('Не удалось загрузить Яндекс.Карты'));
+      document.head.appendChild(script);
+    });
+  mapsPromise = mapsApiPromise.then((ymaps) => new Promise((resolve, reject) => {
     const script = document.createElement('script');
-    script.dataset.yandexMaps = 'true';
-    script.src = `https://api-maps.yandex.ru/2.1/?apikey=${encodeURIComponent(apiKey)}&lang=ru_RU`;
-    script.onload = () => window.ymaps ? window.ymaps.ready(() => resolve(window.ymaps)) : reject(new Error('API не инициализирован'));
-    script.onerror = () => reject(new Error('Не удалось загрузить Яндекс.Карты'));
+    script.dataset.yandexHeatmap = 'true';
+    script.src = 'https://yastatic.net/s3/mapsapi-jslibs/heatmap/0.0.1/heatmap.min.js';
+    script.onload = () => resolve(ymaps);
+    script.onerror = () => reject(new Error('Не удалось загрузить модуль тепловой карты'));
     document.head.appendChild(script);
-  });
+  }));
   return mapsPromise;
 }
 

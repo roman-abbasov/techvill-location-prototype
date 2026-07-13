@@ -3,6 +3,15 @@ import userEvent from '@testing-library/user-event';
 import { expect, it } from 'vitest';
 import App from '../src/App.jsx';
 
+const disclaimer = 'Это концептуальное решение, основанное на моём общем понимании ритейла, изученных открытых источниках и экспертизе в качестве менеджера проектов. Я не располагаю внутренней информацией о том, какие данные, системы и процессы использует Техвилл на практике, как распределены зоны ответственности между отделами. Предложенный мною подход стоит воспринимать как гипотезу, которую нужно уточнять и корректировать вместе с командой на старте проекта.';
+
+it('shows the conceptual disclaimer before the project content', () => {
+  render(<App />);
+
+  expect(screen.getByRole('heading', { name: 'Важно о концепции' })).toBeInTheDocument();
+  expect(screen.getByText(disclaimer)).toBeInTheDocument();
+});
+
 it('renders the approved branding and exactly the ten source sections', () => {
   render(<App />);
 

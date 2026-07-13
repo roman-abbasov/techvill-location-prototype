@@ -1,4 +1,5 @@
 import logoTechvill from '../assets/logo-techvill.svg';
+import Disclaimer from './Disclaimer.jsx';
 
 export default function AppShell({ activeTab, onTabChange, children }) {
   return (
@@ -25,6 +26,7 @@ export default function AppShell({ activeTab, onTabChange, children }) {
           ))}
         </nav>
       </header>
+      <Disclaimer />
       <main id="top">{children}</main>
     </div>
   );
