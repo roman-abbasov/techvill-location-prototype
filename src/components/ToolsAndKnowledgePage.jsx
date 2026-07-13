@@ -1,22 +1,36 @@
+import notionIcon from '../assets/icon-notion.svg';
+import openAiIcon from '../assets/icon-openai.svg';
+import yandexMapsIcon from '../assets/icon-yandex-maps.svg';
+import articlesIcon from '../assets/icon-articles.svg';
+import techvillLogo from '../assets/logo-techvill.svg';
+
 const tools = [
   {
     id: 'notion',
     title: 'Notion',
+    icon: notionIcon,
+    iconAlt: 'Notion',
     description: 'Использовался для первоначальной структуры решения: фиксации идей, разбора кейса, формулировки сути решения и гипотез по работе функционала как такового.',
   },
   {
     id: 'codex',
     title: 'GPT Codex',
+    icon: openAiIcon,
+    iconAlt: 'OpenAI',
     description: 'Вайбкодинг в чистом виде! Использовался как вспомогательный инструмент для вёрстки HTML-страницы, подготовки кода диаграмм и интеграции Яндекс.Карты API, чтобы представить решение в удобном для чтения виде.',
   },
   {
     id: 'yandex',
     title: 'Яндекс.Карты API',
+    icon: yandexMapsIcon,
+    iconAlt: 'Яндекс.Карты',
     description: 'Как один из самых простых и доступных источников для интеграции реальной карты в прототип.',
   },
   {
     id: 'design',
     title: 'Оформление',
+    icon: techvillLogo,
+    iconAlt: 'Техвилл',
     description: 'Изучил сайт techvill.ru и визуально разобрал его на составляющие (цвета, шрифты, иконографику, стиль карточек и кнопок), чтобы оформление прототипа было согласовано с фирменным стилем, а не выглядело как generic-интерфейс.',
   },
 ];
@@ -56,13 +70,19 @@ export default function ToolsAndKnowledgePage() {
       <div className="tools-grid">
         {tools.map((tool) => (
           <article className={`tool-card tool-card-${tool.id}`} key={tool.id}>
-            <h2>{tool.title}</h2>
+            <div className="tool-heading">
+              <span className={`tool-icon tool-icon-${tool.id}`}><img src={tool.icon} alt={tool.iconAlt} /></span>
+              <h2>{tool.title}</h2>
+            </div>
             <p>{tool.description}</p>
           </article>
         ))}
 
         <article className="tool-card articles-card">
-          <h2>Внешние статьи</h2>
+          <div className="tool-heading">
+            <span className="tool-icon tool-icon-articles"><img src={articlesIcon} alt="Внешние статьи" /></span>
+            <h2>Внешние статьи</h2>
+          </div>
           <p>Тема на стыке ритейла и геоаналитики была мне не до конца знакома, поэтому перед тем как писать решение, разобрался в нескольких материалах:</p>
           <ul className="article-list">
             {articles.map((article) => (

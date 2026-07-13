@@ -64,6 +64,7 @@ h1,h2{letter-spacing:-.035em;font-weight:600}
 .topbar{
   position:sticky;
   top:14px;
+  height:auto;
   width:calc(100% - clamp(24px,4vw,56px));
   max-width:1450px;
   min-height:82px;
@@ -161,6 +162,39 @@ h1,h2{letter-spacing:-.035em;font-weight:600}
 .map-fallback-icon,.map-fallback a{color:var(--purple)}
 button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline-color:var(--purple)}
 
+/* Tools and knowledge */
+.tools-page{max-width:1450px;margin:auto;padding:52px clamp(20px,4vw,62px) 90px}
+.tools-intro{padding:clamp(42px,6vw,78px);border-radius:32px;background:#333;color:#fff;overflow:hidden;position:relative}
+.tools-intro::after{content:"";position:absolute;width:340px;height:340px;right:-120px;top:-170px;border-radius:50%;background:var(--lime);opacity:.9}
+.tools-intro>*{position:relative;z-index:1}
+.tools-intro .eyebrow{color:var(--lime)}
+.tools-intro h1{max-width:1050px;margin:.2em 0;font-size:clamp(38px,5.7vw,78px);word-break:normal;overflow-wrap:normal;hyphens:none}
+.tools-intro>p:last-child{max-width:900px;margin:26px 0 0;color:#dedede;font-size:18px;line-height:1.65}
+.tools-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:20px}
+.tool-card{min-height:250px;padding:32px;border-radius:26px;background:#fff;box-shadow:0 10px 28px rgba(23,23,23,.055)}
+.tool-heading{display:flex;align-items:center;gap:18px;margin-bottom:28px}
+.tool-heading h2{margin:0;font-size:clamp(25px,3vw,38px);letter-spacing:-.025em}
+.tool-card>p{max-width:680px;margin:0;color:var(--muted);font-size:16px;line-height:1.65}
+.tool-icon{display:grid;place-items:center;flex:0 0 64px;width:64px;height:64px;padding:14px;border-radius:19px;background:#efffdc}
+.tool-icon img{display:block;width:100%;height:100%;object-fit:contain}
+.tool-icon-codex{background:#eee7ff}
+.tool-icon-yandex{background:#fff0ed;padding:10px}
+.tool-icon-design{flex-basis:154px;width:154px;background:#333;padding:8px 12px}
+.tool-icon-articles{background:#eee7ff}
+.articles-card{grid-column:1/-1;min-height:0}
+.article-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:28px 0 0;padding:0;list-style:none}
+.article-list li{padding:22px;border-radius:18px;background:#f5f7fa}
+.article-list a{display:inline-flex;color:var(--purple);font-size:16px;font-weight:750;line-height:1.4;text-decoration:none}
+.article-list a:hover{text-decoration:underline;text-underline-offset:4px}
+.article-list p{margin:10px 0 0;color:var(--muted);font-size:13px;line-height:1.55}
+.tabs button{white-space:normal;line-height:1.25}
+
+@media(max-width:1350px){
+  .topbar{flex-wrap:wrap}
+  .brand{width:100%;margin-right:0}
+  .tabs{margin-left:auto}
+}
+
 @media(max-width:1100px){
   .topbar{top:8px;border-radius:24px}
   .brand-copy{max-width:none}
@@ -173,13 +207,26 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{ou
   .brand-logo{width:205px;max-width:100%;height:auto}
   .brand-copy small{display:block;font-size:12px}
   .tabs{order:3;width:100%}
-  .tabs button{flex:1}
+  .tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-radius:22px}
+  .tabs button:last-child{grid-column:1/-1}
   .concept-disclaimer{width:calc(100% - 20px);grid-template-columns:1fr;margin-top:20px;padding:19px;border-radius:18px}
   .prototype-disclaimer{grid-template-columns:1fr;padding:19px;border-radius:18px}
   .disclaimer-mark{width:32px;height:32px}
   .hero,.content-section,.conclusion{margin-inline:10px;border-radius:24px;padding-inline:22px}
   .ai-flow article{margin:0 0 12px}
+  .tools-page{padding:30px 10px 64px}
+  .tools-intro{padding:34px 22px;border-radius:24px}
+  .tools-intro h1{font-size:clamp(31px,10vw,44px)}
+  .tools-intro::after{width:180px;height:180px;right:-90px;top:-90px}
+  .tools-intro>p:last-child{font-size:16px}
+  .tools-grid,.article-list{grid-template-columns:1fr}
+  .articles-card{grid-column:auto}
+  .tool-card{min-height:0;padding:24px;border-radius:22px}
+  .tool-heading{align-items:flex-start;flex-direction:column;margin-bottom:20px}
+  .tool-icon-design{width:154px}
 }
+
+@media(max-width:390px){.tabs{grid-template-columns:1fr}.tabs button:last-child{grid-column:auto}}
 
 /* Transparent assessment */
 .map-legend{max-width:460px;flex-wrap:wrap;align-items:center}

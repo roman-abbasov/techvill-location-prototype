@@ -39,3 +39,11 @@ it('provides four safe external article links', () => {
   expect(screen.getByText(/распределение трафика между несколькими точками/)).toBeInTheDocument();
   expect(screen.getByText(/эффекта каннибализации в ритейле/)).toBeInTheDocument();
 });
+
+it('uses recognizable local icons for every block', () => {
+  render(<ToolsAndKnowledgePage />);
+
+  ['Notion', 'OpenAI', 'Яндекс.Карты', 'Внешние статьи', 'Техвилл'].forEach((name) => {
+    expect(screen.getByRole('img', { name })).toBeInTheDocument();
+  });
+});
