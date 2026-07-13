@@ -1,0 +1,1064 @@
+[
+  {
+    "zone_id": "z_001",
+    "score": 62,
+    "revenue_forecast": 4270000,
+    "payback_months": 30,
+    "cannibalization_risk": "low",
+    "nearest_own_store": {
+      "store_id": "s_001",
+      "distance_m": 1361
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "positive",
+        "weight": 0.12
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "negative",
+        "weight": 0.15
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "positive",
+        "weight": 0.73
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "positive",
+        "weight": 0.17
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "positive",
+        "weight": 0.73
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "negative",
+        "weight": 0.17
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "positive",
+        "weight": 0.58
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "negative",
+        "weight": 0.63
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "positive",
+        "weight": 0.46
+      }
+    ],
+    "explanation_text": "Комсомольский проспект, 28 получает 62 баллов: сильнее всего помогают пешеходный трафик и близость метро. Главное ограничение — конкуренты рядом. Риск каннибализации оценивается как низкий."
+  },
+  {
+    "zone_id": "z_002",
+    "score": 49,
+    "revenue_forecast": 3880000,
+    "payback_months": 30,
+    "cannibalization_risk": "medium",
+    "nearest_own_store": {
+      "store_id": "s_002",
+      "distance_m": 874
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "positive",
+        "weight": 0.73
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "positive",
+        "weight": 0.26
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "negative",
+        "weight": 0.29
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "negative",
+        "weight": 0.4
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "negative",
+        "weight": 0.48
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "negative",
+        "weight": 0.5
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "positive",
+        "weight": 0.6
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "positive",
+        "weight": 0.38
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "negative",
+        "weight": 0.46
+      }
+    ],
+    "explanation_text": "ул. Фадеева, 4А получает 49 баллов: сильнее всего помогают плотность населения и спрос в доставке. Главное ограничение — новая застройка. Риск каннибализации оценивается как средний."
+  },
+  {
+    "zone_id": "z_003",
+    "score": 58,
+    "revenue_forecast": 4080000,
+    "payback_months": 30,
+    "cannibalization_risk": "low",
+    "nearest_own_store": {
+      "store_id": "s_003",
+      "distance_m": 733
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "positive",
+        "weight": 0.26
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "positive",
+        "weight": 0.31
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "positive",
+        "weight": 0.84
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "positive",
+        "weight": 0.57
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "negative",
+        "weight": 0.73
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "negative",
+        "weight": 0.5
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "positive",
+        "weight": 0.4
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "negative",
+        "weight": 0.13
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "negative",
+        "weight": 0.42
+      }
+    ],
+    "explanation_text": "ул. Покровка, 31 получает 58 баллов: сильнее всего помогают пешеходный трафик и автомобильный трафик. Главное ограничение — близость метро. Риск каннибализации оценивается как низкий."
+  },
+  {
+    "zone_id": "z_004",
+    "score": 60,
+    "revenue_forecast": 4150000,
+    "payback_months": 30,
+    "cannibalization_risk": "low",
+    "nearest_own_store": {
+      "store_id": "s_004",
+      "distance_m": 1366
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "positive",
+        "weight": 0.6
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "positive",
+        "weight": 0.44
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "negative",
+        "weight": 0.2
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "positive",
+        "weight": 0.13
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "negative",
+        "weight": 0.12
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "positive",
+        "weight": 0.17
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "positive",
+        "weight": 0.44
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "positive",
+        "weight": 0.13
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "negative",
+        "weight": 0.12
+      }
+    ],
+    "explanation_text": "Шмитовский проезд, 16 получает 60 баллов: сильнее всего помогают плотность населения и доход аудитории. Главное ограничение — пешеходный трафик. Риск каннибализации оценивается как низкий."
+  },
+  {
+    "zone_id": "z_005",
+    "score": 56,
+    "revenue_forecast": 4180000,
+    "payback_months": 30,
+    "cannibalization_risk": "medium",
+    "nearest_own_store": {
+      "store_id": "s_005",
+      "distance_m": 320
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "positive",
+        "weight": 0.12
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "negative",
+        "weight": 0.23
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "positive",
+        "weight": 0.67
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "negative",
+        "weight": 0.12
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "negative",
+        "weight": 0.12
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "positive",
+        "weight": 0.17
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "positive",
+        "weight": 0.82
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "negative",
+        "weight": 0.63
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "negative",
+        "weight": 0.19
+      }
+    ],
+    "explanation_text": "ул. Ленинская Слобода, 26 получает 56 баллов: сильнее всего помогают спрос в доставке и пешеходный трафик. Главное ограничение — конкуренты рядом. Риск каннибализации оценивается как средний."
+  },
+  {
+    "zone_id": "z_006",
+    "score": 42,
+    "revenue_forecast": 3380000,
+    "payback_months": 30,
+    "cannibalization_risk": "medium",
+    "nearest_own_store": {
+      "store_id": "s_006",
+      "distance_m": 846
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "positive",
+        "weight": 0.41
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "positive",
+        "weight": 0.12
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "negative",
+        "weight": 0.36
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "positive",
+        "weight": 0.47
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "negative",
+        "weight": 0.8
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "positive",
+        "weight": 0.5
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "negative",
+        "weight": 0.12
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "negative",
+        "weight": 0.38
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "negative",
+        "weight": 0.25
+      }
+    ],
+    "explanation_text": "Ленинградский проспект, 62 получает 42 баллов: сильнее всего помогают новая застройка и автомобильный трафик. Главное ограничение — близость метро. Риск каннибализации оценивается как средний."
+  },
+  {
+    "zone_id": "z_007",
+    "score": 43,
+    "revenue_forecast": 3320000,
+    "payback_months": 30,
+    "cannibalization_risk": "medium",
+    "nearest_own_store": {
+      "store_id": "s_007",
+      "distance_m": 903
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "positive",
+        "weight": 0.88
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "positive",
+        "weight": 0.14
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "negative",
+        "weight": 0.24
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "negative",
+        "weight": 0.28
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "positive",
+        "weight": 0.61
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "positive",
+        "weight": 0.17
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "negative",
+        "weight": 0.33
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "negative",
+        "weight": 0.63
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "negative",
+        "weight": 0.49
+      }
+    ],
+    "explanation_text": "ул. Алабяна, 7 получает 43 баллов: сильнее всего помогают плотность населения и близость метро. Главное ограничение — конкуренты рядом. Риск каннибализации оценивается как средний."
+  },
+  {
+    "zone_id": "z_008",
+    "score": 54,
+    "revenue_forecast": 4070000,
+    "payback_months": 30,
+    "cannibalization_risk": "medium",
+    "nearest_own_store": {
+      "store_id": "s_008",
+      "distance_m": 637
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "negative",
+        "weight": 0.2
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "positive",
+        "weight": 0.12
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "negative",
+        "weight": 0.27
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "negative",
+        "weight": 0.25
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "positive",
+        "weight": 0.65
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "negative",
+        "weight": 0.17
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "positive",
+        "weight": 0.7
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "positive",
+        "weight": 0.38
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "positive",
+        "weight": 0.12
+      }
+    ],
+    "explanation_text": "Мичуринский проспект, 21 получает 54 баллов: сильнее всего помогают спрос в доставке и близость метро. Главное ограничение — пешеходный трафик. Риск каннибализации оценивается как средний."
+  },
+  {
+    "zone_id": "z_009",
+    "score": 59,
+    "revenue_forecast": 4110000,
+    "payback_months": 30,
+    "cannibalization_risk": "medium",
+    "nearest_own_store": {
+      "store_id": "s_009",
+      "distance_m": 503
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "negative",
+        "weight": 0.33
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "positive",
+        "weight": 0.35
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "positive",
+        "weight": 0.76
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "negative",
+        "weight": 0.22
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "negative",
+        "weight": 0.12
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "positive",
+        "weight": 0.17
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "positive",
+        "weight": 0.41
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "negative",
+        "weight": 0.38
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "positive",
+        "weight": 0.17
+      }
+    ],
+    "explanation_text": "ул. Дмитрия Ульянова, 20 получает 59 баллов: сильнее всего помогают пешеходный трафик и спрос в доставке. Главное ограничение — конкуренты рядом. Риск каннибализации оценивается как средний."
+  },
+  {
+    "zone_id": "z_010",
+    "score": 56,
+    "revenue_forecast": 4010000,
+    "payback_months": 30,
+    "cannibalization_risk": "medium",
+    "nearest_own_store": {
+      "store_id": "s_010",
+      "distance_m": 759
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "negative",
+        "weight": 0.12
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "positive",
+        "weight": 0.22
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "negative",
+        "weight": 0.27
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "negative",
+        "weight": 0.25
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "positive",
+        "weight": 0.55
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "positive",
+        "weight": 0.17
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "positive",
+        "weight": 0.4
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "positive",
+        "weight": 0.13
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "positive",
+        "weight": 0.51
+      }
+    ],
+    "explanation_text": "Профсоюзная ул., 43 получает 56 баллов: сильнее всего помогают близость метро и ставка аренды. Главное ограничение — пешеходный трафик. Риск каннибализации оценивается как средний."
+  },
+  {
+    "zone_id": "z_011",
+    "score": 60,
+    "revenue_forecast": 4130000,
+    "payback_months": 30,
+    "cannibalization_risk": "medium",
+    "nearest_own_store": {
+      "store_id": "s_011",
+      "distance_m": 700
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "negative",
+        "weight": 0.52
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "positive",
+        "weight": 0.12
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "positive",
+        "weight": 0.42
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "negative",
+        "weight": 0.12
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "positive",
+        "weight": 0.72
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "positive",
+        "weight": 0.83
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "positive",
+        "weight": 0.37
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "negative",
+        "weight": 0.13
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "positive",
+        "weight": 0.17
+      }
+    ],
+    "explanation_text": "Шереметьевская ул., 20 получает 60 баллов: сильнее всего помогают новая застройка и близость метро. Главное ограничение — плотность населения. Риск каннибализации оценивается как средний."
+  },
+  {
+    "zone_id": "z_012",
+    "score": 47,
+    "revenue_forecast": 3720000,
+    "payback_months": 30,
+    "cannibalization_risk": "low",
+    "nearest_own_store": {
+      "store_id": "s_012",
+      "distance_m": 1270
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "positive",
+        "weight": 0.75
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "negative",
+        "weight": 0.18
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "negative",
+        "weight": 0.38
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "negative",
+        "weight": 0.33
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "positive",
+        "weight": 0.63
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "negative",
+        "weight": 0.17
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "positive",
+        "weight": 0.37
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "negative",
+        "weight": 0.13
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "negative",
+        "weight": 0.3
+      }
+    ],
+    "explanation_text": "Авиамоторная ул., 14 получает 47 баллов: сильнее всего помогают плотность населения и близость метро. Главное ограничение — пешеходный трафик. Риск каннибализации оценивается как низкий."
+  },
+  {
+    "zone_id": "z_013",
+    "score": 44,
+    "revenue_forecast": 3490000,
+    "payback_months": 30,
+    "cannibalization_risk": "medium",
+    "nearest_own_store": {
+      "store_id": "s_013",
+      "distance_m": 776
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "positive",
+        "weight": 0.49
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "positive",
+        "weight": 0.14
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "negative",
+        "weight": 0.42
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "positive",
+        "weight": 0.45
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "negative",
+        "weight": 0.68
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "negative",
+        "weight": 0.17
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "positive",
+        "weight": 0.12
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "negative",
+        "weight": 0.38
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "positive",
+        "weight": 0.39
+      }
+    ],
+    "explanation_text": "Русаковская ул., 24 получает 44 баллов: сильнее всего помогают плотность населения и автомобильный трафик. Главное ограничение — близость метро. Риск каннибализации оценивается как средний."
+  },
+  {
+    "zone_id": "z_014",
+    "score": 58,
+    "revenue_forecast": 4210000,
+    "payback_months": 30,
+    "cannibalization_risk": "medium",
+    "nearest_own_store": {
+      "store_id": "s_014",
+      "distance_m": 681
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "positive",
+        "weight": 0.65
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "negative",
+        "weight": 0.12
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "positive",
+        "weight": 0.36
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "positive",
+        "weight": 0.55
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "negative",
+        "weight": 0.41
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "negative",
+        "weight": 0.5
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "positive",
+        "weight": 0.74
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "negative",
+        "weight": 0.38
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "negative",
+        "weight": 0.12
+      }
+    ],
+    "explanation_text": "Олимпийский проспект, 16 получает 58 баллов: сильнее всего помогают спрос в доставке и плотность населения. Главное ограничение — новая застройка. Риск каннибализации оценивается как средний."
+  },
+  {
+    "zone_id": "z_015",
+    "score": 54,
+    "revenue_forecast": 3660000,
+    "payback_months": 30,
+    "cannibalization_risk": "medium",
+    "nearest_own_store": {
+      "store_id": "s_015",
+      "distance_m": 890
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "negative",
+        "weight": 0.24
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "positive",
+        "weight": 0.21
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "positive",
+        "weight": 0.47
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "positive",
+        "weight": 0.55
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "negative",
+        "weight": 0.39
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "positive",
+        "weight": 0.83
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "negative",
+        "weight": 0.35
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "negative",
+        "weight": 0.13
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "positive",
+        "weight": 0.12
+      }
+    ],
+    "explanation_text": "7-я Кожуховская ул., 9 получает 54 баллов: сильнее всего помогают новая застройка и автомобильный трафик. Главное ограничение — близость метро. Риск каннибализации оценивается как средний."
+  },
+  {
+    "zone_id": "z_016",
+    "score": 55,
+    "revenue_forecast": 3820000,
+    "payback_months": 30,
+    "cannibalization_risk": "medium",
+    "nearest_own_store": {
+      "store_id": "s_016",
+      "distance_m": 719
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "positive",
+        "weight": 0.65
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "negative",
+        "weight": 0.12
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "positive",
+        "weight": 0.33
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "positive",
+        "weight": 0.43
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "negative",
+        "weight": 0.82
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "positive",
+        "weight": 0.17
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "negative",
+        "weight": 0.12
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "negative",
+        "weight": 0.13
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "positive",
+        "weight": 0.53
+      }
+    ],
+    "explanation_text": "ул. Народного Ополчения, 21 получает 55 баллов: сильнее всего помогают плотность населения и ставка аренды. Главное ограничение — близость метро. Риск каннибализации оценивается как средний."
+  },
+  {
+    "zone_id": "z_017",
+    "score": 56,
+    "revenue_forecast": 4160000,
+    "payback_months": 30,
+    "cannibalization_risk": "low",
+    "nearest_own_store": {
+      "store_id": "s_017",
+      "distance_m": 2004
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "positive",
+        "weight": 0.93
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "negative",
+        "weight": 0.15
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "negative",
+        "weight": 0.12
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "positive",
+        "weight": 0.52
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "positive",
+        "weight": 0.23
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "positive",
+        "weight": 0.17
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "positive",
+        "weight": 0.78
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "negative",
+        "weight": 0.88
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "negative",
+        "weight": 0.43
+      }
+    ],
+    "explanation_text": "Нагатинская ул., 16 получает 56 баллов: сильнее всего помогают плотность населения и спрос в доставке. Главное ограничение — конкуренты рядом. Риск каннибализации оценивается как низкий."
+  },
+  {
+    "zone_id": "z_018",
+    "score": 44,
+    "revenue_forecast": 3320000,
+    "payback_months": 30,
+    "cannibalization_risk": "medium",
+    "nearest_own_store": {
+      "store_id": "s_018",
+      "distance_m": 624
+    },
+    "factor_contributions": [
+      {
+        "factor": "Плотность населения",
+        "impact": "positive",
+        "weight": 0.53
+      },
+      {
+        "factor": "Доход аудитории",
+        "impact": "positive",
+        "weight": 0.12
+      },
+      {
+        "factor": "Пешеходный трафик",
+        "impact": "positive",
+        "weight": 0.56
+      },
+      {
+        "factor": "Автомобильный трафик",
+        "impact": "positive",
+        "weight": 0.63
+      },
+      {
+        "factor": "Близость метро",
+        "impact": "negative",
+        "weight": 0.7
+      },
+      {
+        "factor": "Новая застройка",
+        "impact": "negative",
+        "weight": 0.17
+      },
+      {
+        "factor": "Спрос в доставке",
+        "impact": "negative",
+        "weight": 0.4
+      },
+      {
+        "factor": "Конкуренты рядом",
+        "impact": "negative",
+        "weight": 0.63
+      },
+      {
+        "factor": "Ставка аренды",
+        "impact": "negative",
+        "weight": 0.39
+      }
+    ],
+    "explanation_text": "Первомайская ул., 42 получает 44 баллов: сильнее всего помогают автомобильный трафик и пешеходный трафик. Главное ограничение — близость метро. Риск каннибализации оценивается как средний."
+  }
+]

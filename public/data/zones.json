@@ -1,0 +1,686 @@
+[
+  {
+    "zone_id": "z_001",
+    "city": "Москва",
+    "district": "Хамовники",
+    "address_label": "Комсомольский проспект, 28",
+    "center_lat": 55.7279,
+    "center_lng": 37.5773,
+    "distance_from_center_km": 3.7,
+    "geometry": [
+      [
+        55.725699999999996,
+        37.5738
+      ],
+      [
+        55.725699999999996,
+        37.5808
+      ],
+      [
+        55.7301,
+        37.5808
+      ],
+      [
+        55.7301,
+        37.5738
+      ]
+    ],
+    "features": {
+      "population_density": 12433,
+      "avg_income_index": 0.9,
+      "competitors_count_300m": 4,
+      "foot_traffic_score": 88,
+      "car_traffic_score": 60,
+      "distance_to_metro_m": 195,
+      "new_developments_nearby": 1,
+      "delivery_orders_density": 277,
+      "rent_price_per_sqm": 2591
+    }
+  },
+  {
+    "zone_id": "z_002",
+    "city": "Москва",
+    "district": "Тверской",
+    "address_label": "ул. Фадеева, 4А",
+    "center_lat": 55.7781,
+    "center_lng": 37.5992,
+    "distance_from_center_km": 3.2,
+    "geometry": [
+      [
+        55.7759,
+        37.5957
+      ],
+      [
+        55.7759,
+        37.602700000000006
+      ],
+      [
+        55.780300000000004,
+        37.602700000000006
+      ],
+      [
+        55.780300000000004,
+        37.5957
+      ]
+    ],
+    "features": {
+      "population_density": 19295,
+      "avg_income_index": 1.31,
+      "competitors_count_300m": 0,
+      "foot_traffic_score": 42,
+      "car_traffic_score": 26,
+      "distance_to_metro_m": 1283,
+      "new_developments_nearby": 0,
+      "delivery_orders_density": 282,
+      "rent_price_per_sqm": 5815
+    }
+  },
+  {
+    "zone_id": "z_003",
+    "city": "Москва",
+    "district": "Басманный",
+    "address_label": "ул. Покровка, 31",
+    "center_lat": 55.7596,
+    "center_lng": 37.6535,
+    "distance_from_center_km": 2.4,
+    "geometry": [
+      [
+        55.7574,
+        37.65
+      ],
+      [
+        55.7574,
+        37.657000000000004
+      ],
+      [
+        55.7618,
+        37.657000000000004
+      ],
+      [
+        55.7618,
+        37.65
+      ]
+    ],
+    "features": {
+      "population_density": 14602,
+      "avg_income_index": 1.36,
+      "competitors_count_300m": 2,
+      "foot_traffic_score": 93,
+      "car_traffic_score": 84,
+      "distance_to_metro_m": 1507,
+      "new_developments_nearby": 0,
+      "delivery_orders_density": 238,
+      "rent_price_per_sqm": 5664
+    }
+  },
+  {
+    "zone_id": "z_004",
+    "city": "Москва",
+    "district": "Пресненский",
+    "address_label": "Шмитовский проезд, 16",
+    "center_lat": 55.7568,
+    "center_lng": 37.5489,
+    "distance_from_center_km": 4.4,
+    "geometry": [
+      [
+        55.754599999999996,
+        37.5454
+      ],
+      [
+        55.754599999999996,
+        37.552400000000006
+      ],
+      [
+        55.759,
+        37.552400000000006
+      ],
+      [
+        55.759,
+        37.5454
+      ]
+    ],
+    "features": {
+      "population_density": 18018,
+      "avg_income_index": 1.49,
+      "competitors_count_300m": 1,
+      "foot_traffic_score": 46,
+      "car_traffic_score": 58,
+      "distance_to_metro_m": 882,
+      "new_developments_nearby": 2,
+      "delivery_orders_density": 247,
+      "rent_price_per_sqm": 4237
+    }
+  },
+  {
+    "zone_id": "z_005",
+    "city": "Москва",
+    "district": "Даниловский",
+    "address_label": "ул. Ленинская Слобода, 26",
+    "center_lat": 55.7095,
+    "center_lng": 37.6538,
+    "distance_from_center_km": 5.1,
+    "geometry": [
+      [
+        55.7073,
+        37.650299999999994
+      ],
+      [
+        55.7073,
+        37.6573
+      ],
+      [
+        55.7117,
+        37.6573
+      ],
+      [
+        55.7117,
+        37.650299999999994
+      ]
+    ],
+    "features": {
+      "population_density": 13023,
+      "avg_income_index": 0.82,
+      "competitors_count_300m": 4,
+      "foot_traffic_score": 85,
+      "car_traffic_score": 43,
+      "distance_to_metro_m": 855,
+      "new_developments_nearby": 2,
+      "delivery_orders_density": 330,
+      "rent_price_per_sqm": 4850
+    }
+  },
+  {
+    "zone_id": "z_006",
+    "city": "Москва",
+    "district": "Аэропорт",
+    "address_label": "Ленинградский проспект, 62",
+    "center_lat": 55.8007,
+    "center_lng": 37.5313,
+    "distance_from_center_km": 7.7,
+    "geometry": [
+      [
+        55.7985,
+        37.5278
+      ],
+      [
+        55.7985,
+        37.534800000000004
+      ],
+      [
+        55.8029,
+        37.534800000000004
+      ],
+      [
+        55.8029,
+        37.5278
+      ]
+    ],
+    "features": {
+      "population_density": 16121,
+      "avg_income_index": 1.06,
+      "competitors_count_300m": 3,
+      "foot_traffic_score": 39,
+      "car_traffic_score": 78,
+      "distance_to_metro_m": 1571,
+      "new_developments_nearby": 3,
+      "delivery_orders_density": 125,
+      "rent_price_per_sqm": 5089
+    }
+  },
+  {
+    "zone_id": "z_007",
+    "city": "Москва",
+    "district": "Сокол",
+    "address_label": "ул. Алабяна, 7",
+    "center_lat": 55.8011,
+    "center_lng": 37.5041,
+    "distance_from_center_km": 9,
+    "geometry": [
+      [
+        55.798899999999996,
+        37.5006
+      ],
+      [
+        55.798899999999996,
+        37.507600000000004
+      ],
+      [
+        55.8033,
+        37.507600000000004
+      ],
+      [
+        55.8033,
+        37.5006
+      ]
+    ],
+    "features": {
+      "population_density": 20778,
+      "avg_income_index": 1.19,
+      "competitors_count_300m": 4,
+      "foot_traffic_score": 44,
+      "car_traffic_score": 33,
+      "distance_to_metro_m": 300,
+      "new_developments_nearby": 2,
+      "delivery_orders_density": 78,
+      "rent_price_per_sqm": 5922
+    }
+  },
+  {
+    "zone_id": "z_008",
+    "city": "Москва",
+    "district": "Раменки",
+    "address_label": "Мичуринский проспект, 21",
+    "center_lat": 55.7017,
+    "center_lng": 37.5038,
+    "distance_from_center_km": 9,
+    "geometry": [
+      [
+        55.6995,
+        37.500299999999996
+      ],
+      [
+        55.6995,
+        37.5073
+      ],
+      [
+        55.703900000000004,
+        37.5073
+      ],
+      [
+        55.703900000000004,
+        37.500299999999996
+      ]
+    ],
+    "features": {
+      "population_density": 9990,
+      "avg_income_index": 1.15,
+      "competitors_count_300m": 0,
+      "foot_traffic_score": 43,
+      "car_traffic_score": 35,
+      "distance_to_metro_m": 262,
+      "new_developments_nearby": 1,
+      "delivery_orders_density": 303,
+      "rent_price_per_sqm": 4110
+    }
+  },
+  {
+    "zone_id": "z_009",
+    "city": "Москва",
+    "district": "Академический",
+    "address_label": "ул. Дмитрия Ульянова, 20",
+    "center_lat": 55.6871,
+    "center_lng": 37.5745,
+    "distance_from_center_km": 7.6,
+    "geometry": [
+      [
+        55.6849,
+        37.571
+      ],
+      [
+        55.6849,
+        37.578
+      ],
+      [
+        55.6893,
+        37.578
+      ],
+      [
+        55.6893,
+        37.571
+      ]
+    ],
+    "features": {
+      "population_density": 8658,
+      "avg_income_index": 1.4,
+      "competitors_count_300m": 3,
+      "foot_traffic_score": 89,
+      "car_traffic_score": 37,
+      "distance_to_metro_m": 911,
+      "new_developments_nearby": 2,
+      "delivery_orders_density": 240,
+      "rent_price_per_sqm": 3597
+    }
+  },
+  {
+    "zone_id": "z_010",
+    "city": "Москва",
+    "district": "Черёмушки",
+    "address_label": "Профсоюзная ул., 43",
+    "center_lat": 55.6756,
+    "center_lng": 37.5626,
+    "distance_from_center_km": 9.1,
+    "geometry": [
+      [
+        55.6734,
+        37.5591
+      ],
+      [
+        55.6734,
+        37.566100000000006
+      ],
+      [
+        55.677800000000005,
+        37.566100000000006
+      ],
+      [
+        55.677800000000005,
+        37.5591
+      ]
+    ],
+    "features": {
+      "population_density": 11813,
+      "avg_income_index": 1.27,
+      "competitors_count_300m": 1,
+      "foot_traffic_score": 43,
+      "car_traffic_score": 35,
+      "distance_to_metro_m": 359,
+      "new_developments_nearby": 2,
+      "delivery_orders_density": 238,
+      "rent_price_per_sqm": 2418
+    }
+  },
+  {
+    "zone_id": "z_011",
+    "city": "Москва",
+    "district": "Марьина Роща",
+    "address_label": "Шереметьевская ул., 20",
+    "center_lat": 55.7978,
+    "center_lng": 37.6167,
+    "distance_from_center_km": 5.2,
+    "geometry": [
+      [
+        55.7956,
+        37.6132
+      ],
+      [
+        55.7956,
+        37.620200000000004
+      ],
+      [
+        55.800000000000004,
+        37.620200000000004
+      ],
+      [
+        55.800000000000004,
+        37.6132
+      ]
+    ],
+    "features": {
+      "population_density": 6754,
+      "avg_income_index": 1.08,
+      "competitors_count_300m": 2,
+      "foot_traffic_score": 74,
+      "car_traffic_score": 48,
+      "distance_to_metro_m": 203,
+      "new_developments_nearby": 4,
+      "delivery_orders_density": 232,
+      "rent_price_per_sqm": 3622
+    }
+  },
+  {
+    "zone_id": "z_012",
+    "city": "Москва",
+    "district": "Лефортово",
+    "address_label": "Авиамоторная ул., 14",
+    "center_lat": 55.7521,
+    "center_lng": 37.7168,
+    "distance_from_center_km": 6.2,
+    "geometry": [
+      [
+        55.7499,
+        37.7133
+      ],
+      [
+        55.7499,
+        37.7203
+      ],
+      [
+        55.7543,
+        37.7203
+      ],
+      [
+        55.7543,
+        37.7133
+      ]
+    ],
+    "features": {
+      "population_density": 19466,
+      "avg_income_index": 0.87,
+      "competitors_count_300m": 2,
+      "foot_traffic_score": 38,
+      "car_traffic_score": 30,
+      "distance_to_metro_m": 282,
+      "new_developments_nearby": 1,
+      "delivery_orders_density": 231,
+      "rent_price_per_sqm": 5234
+    }
+  },
+  {
+    "zone_id": "z_013",
+    "city": "Москва",
+    "district": "Сокольники",
+    "address_label": "Русаковская ул., 24",
+    "center_lat": 55.7895,
+    "center_lng": 37.6794,
+    "distance_from_center_km": 5.7,
+    "geometry": [
+      [
+        55.787299999999995,
+        37.6759
+      ],
+      [
+        55.787299999999995,
+        37.682900000000004
+      ],
+      [
+        55.7917,
+        37.682900000000004
+      ],
+      [
+        55.7917,
+        37.6759
+      ]
+    ],
+    "features": {
+      "population_density": 16862,
+      "avg_income_index": 1.19,
+      "competitors_count_300m": 3,
+      "foot_traffic_score": 36,
+      "car_traffic_score": 77,
+      "distance_to_metro_m": 1461,
+      "new_developments_nearby": 1,
+      "delivery_orders_density": 152,
+      "rent_price_per_sqm": 2827
+    }
+  },
+  {
+    "zone_id": "z_014",
+    "city": "Москва",
+    "district": "Мещанский",
+    "address_label": "Олимпийский проспект, 16",
+    "center_lat": 55.7829,
+    "center_lng": 37.6237,
+    "distance_from_center_km": 3.5,
+    "geometry": [
+      [
+        55.780699999999996,
+        37.6202
+      ],
+      [
+        55.780699999999996,
+        37.6272
+      ],
+      [
+        55.7851,
+        37.6272
+      ],
+      [
+        55.7851,
+        37.6202
+      ]
+    ],
+    "features": {
+      "population_density": 18474,
+      "avg_income_index": 1.04,
+      "competitors_count_300m": 3,
+      "foot_traffic_score": 71,
+      "car_traffic_score": 83,
+      "distance_to_metro_m": 1219,
+      "new_developments_nearby": 0,
+      "delivery_orders_density": 312,
+      "rent_price_per_sqm": 4279
+    }
+  },
+  {
+    "zone_id": "z_015",
+    "city": "Москва",
+    "district": "Южнопортовый",
+    "address_label": "7-я Кожуховская ул., 9",
+    "center_lat": 55.7049,
+    "center_lng": 37.6737,
+    "distance_from_center_km": 6.2,
+    "geometry": [
+      [
+        55.7027,
+        37.670199999999994
+      ],
+      [
+        55.7027,
+        37.6772
+      ],
+      [
+        55.707100000000004,
+        37.6772
+      ],
+      [
+        55.707100000000004,
+        37.670199999999994
+      ]
+    ],
+    "features": {
+      "population_density": 9556,
+      "avg_income_index": 1.26,
+      "competitors_count_300m": 2,
+      "foot_traffic_score": 76,
+      "car_traffic_score": 83,
+      "distance_to_metro_m": 1197,
+      "new_developments_nearby": 4,
+      "delivery_orders_density": 74,
+      "rent_price_per_sqm": 3815
+    }
+  },
+  {
+    "zone_id": "z_016",
+    "city": "Москва",
+    "district": "Хорошёво-Мнёвники",
+    "address_label": "ул. Народного Ополчения, 21",
+    "center_lat": 55.7769,
+    "center_lng": 37.4803,
+    "distance_from_center_km": 9.1,
+    "geometry": [
+      [
+        55.774699999999996,
+        37.4768
+      ],
+      [
+        55.774699999999996,
+        37.4838
+      ],
+      [
+        55.7791,
+        37.4838
+      ],
+      [
+        55.7791,
+        37.4768
+      ]
+    ],
+    "features": {
+      "population_density": 18452,
+      "avg_income_index": 0.98,
+      "competitors_count_300m": 2,
+      "foot_traffic_score": 70,
+      "car_traffic_score": 76,
+      "distance_to_metro_m": 1589,
+      "new_developments_nearby": 2,
+      "delivery_orders_density": 146,
+      "rent_price_per_sqm": 2359
+    }
+  },
+  {
+    "zone_id": "z_017",
+    "city": "Москва",
+    "district": "Нагатино-Садовники",
+    "address_label": "Нагатинская ул., 16",
+    "center_lat": 55.6814,
+    "center_lng": 37.6299,
+    "distance_from_center_km": 7.8,
+    "geometry": [
+      [
+        55.679199999999994,
+        37.6264
+      ],
+      [
+        55.679199999999994,
+        37.6334
+      ],
+      [
+        55.6836,
+        37.6334
+      ],
+      [
+        55.6836,
+        37.6264
+      ]
+    ],
+    "features": {
+      "population_density": 21268,
+      "avg_income_index": 0.9,
+      "competitors_count_300m": 5,
+      "foot_traffic_score": 51,
+      "car_traffic_score": 81,
+      "distance_to_metro_m": 646,
+      "new_developments_nearby": 2,
+      "delivery_orders_density": 321,
+      "rent_price_per_sqm": 5707
+    }
+  },
+  {
+    "zone_id": "z_018",
+    "city": "Москва",
+    "district": "Измайлово",
+    "address_label": "Первомайская ул., 42",
+    "center_lat": 55.7937,
+    "center_lng": 37.7906,
+    "distance_from_center_km": 11.8,
+    "geometry": [
+      [
+        55.7915,
+        37.787099999999995
+      ],
+      [
+        55.7915,
+        37.7941
+      ],
+      [
+        55.7959,
+        37.7941
+      ],
+      [
+        55.7959,
+        37.787099999999995
+      ]
+    ],
+    "features": {
+      "population_density": 17272,
+      "avg_income_index": 1.09,
+      "competitors_count_300m": 4,
+      "foot_traffic_score": 80,
+      "car_traffic_score": 88,
+      "distance_to_metro_m": 1481,
+      "new_developments_nearby": 1,
+      "delivery_orders_density": 61,
+      "rent_price_per_sqm": 5575
+    }
+  }
+]

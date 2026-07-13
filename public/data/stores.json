@@ -1,0 +1,382 @@
+[
+  {
+    "store_id": "s_001",
+    "lat": 55.7363,
+    "lng": 37.5931,
+    "address_label": "ул. Остоженка, 27",
+    "opened_date": "2020-01-01",
+    "monthly_revenue": 3452128,
+    "features": {
+      "population_density": 16678,
+      "avg_income_index": 1.02,
+      "competitors_count_300m": 1,
+      "foot_traffic_score": 40,
+      "car_traffic_score": 69,
+      "distance_to_metro_m": 815,
+      "new_developments_nearby": 1,
+      "delivery_orders_density": 306,
+      "rent_price_per_sqm": 4362
+    }
+  },
+  {
+    "store_id": "s_002",
+    "lat": 55.7704,
+    "lng": 37.5964,
+    "address_label": "Тверская ул., 25",
+    "opened_date": "2021-02-01",
+    "monthly_revenue": 4555352,
+    "features": {
+      "population_density": 17964,
+      "avg_income_index": 1.06,
+      "competitors_count_300m": 3,
+      "foot_traffic_score": 70,
+      "car_traffic_score": 44,
+      "distance_to_metro_m": 1046,
+      "new_developments_nearby": 2,
+      "delivery_orders_density": 266,
+      "rent_price_per_sqm": 2543
+    }
+  },
+  {
+    "store_id": "s_003",
+    "lat": 55.7617,
+    "lng": 37.6424,
+    "address_label": "Чистопрудный б-р, 12",
+    "opened_date": "2022-03-01",
+    "monthly_revenue": 2427950,
+    "features": {
+      "population_density": 8021,
+      "avg_income_index": 0.93,
+      "competitors_count_300m": 3,
+      "foot_traffic_score": 82,
+      "car_traffic_score": 68,
+      "distance_to_metro_m": 388,
+      "new_developments_nearby": 2,
+      "delivery_orders_density": 62,
+      "rent_price_per_sqm": 2997
+    }
+  },
+  {
+    "store_id": "s_004",
+    "lat": 55.7635,
+    "lng": 37.5672,
+    "address_label": "Красная Пресня, 32",
+    "opened_date": "2023-04-01",
+    "monthly_revenue": 2669644,
+    "features": {
+      "population_density": 14382,
+      "avg_income_index": 0.96,
+      "competitors_count_300m": 4,
+      "foot_traffic_score": 66,
+      "car_traffic_score": 26,
+      "distance_to_metro_m": 541,
+      "new_developments_nearby": 1,
+      "delivery_orders_density": 297,
+      "rent_price_per_sqm": 3787
+    }
+  },
+  {
+    "store_id": "s_005",
+    "lat": 55.7074,
+    "lng": 37.6573,
+    "address_label": "Автозаводская ул., 8",
+    "opened_date": "2024-05-01",
+    "monthly_revenue": 3483991,
+    "features": {
+      "population_density": 13021,
+      "avg_income_index": 1.15,
+      "competitors_count_300m": 4,
+      "foot_traffic_score": 44,
+      "car_traffic_score": 77,
+      "distance_to_metro_m": 1487,
+      "new_developments_nearby": 3,
+      "delivery_orders_density": 325,
+      "rent_price_per_sqm": 5432
+    }
+  },
+  {
+    "store_id": "s_006",
+    "lat": 55.7959,
+    "lng": 37.5418,
+    "address_label": "Ленинградский пр-т, 47",
+    "opened_date": "2020-06-01",
+    "monthly_revenue": 5186660,
+    "features": {
+      "population_density": 10589,
+      "avg_income_index": 1.24,
+      "competitors_count_300m": 4,
+      "foot_traffic_score": 45,
+      "car_traffic_score": 38,
+      "distance_to_metro_m": 305,
+      "new_developments_nearby": 0,
+      "delivery_orders_density": 138,
+      "rent_price_per_sqm": 5931
+    }
+  },
+  {
+    "store_id": "s_007",
+    "lat": 55.8083,
+    "lng": 37.4974,
+    "address_label": "Волоколамское ш., 3",
+    "opened_date": "2021-07-01",
+    "monthly_revenue": 4381685,
+    "features": {
+      "population_density": 10432,
+      "avg_income_index": 1.31,
+      "competitors_count_300m": 2,
+      "foot_traffic_score": 73,
+      "car_traffic_score": 76,
+      "distance_to_metro_m": 358,
+      "new_developments_nearby": 1,
+      "delivery_orders_density": 149,
+      "rent_price_per_sqm": 3075
+    }
+  },
+  {
+    "store_id": "s_008",
+    "lat": 55.7064,
+    "lng": 37.5096,
+    "address_label": "Мосфильмовская ул., 35",
+    "opened_date": "2022-08-01",
+    "monthly_revenue": 4442683,
+    "features": {
+      "population_density": 12094,
+      "avg_income_index": 1.11,
+      "competitors_count_300m": 5,
+      "foot_traffic_score": 39,
+      "car_traffic_score": 68,
+      "distance_to_metro_m": 1586,
+      "new_developments_nearby": 3,
+      "delivery_orders_density": 85,
+      "rent_price_per_sqm": 4853
+    }
+  },
+  {
+    "store_id": "s_009",
+    "lat": 55.6916,
+    "lng": 37.5753,
+    "address_label": "Ленинский пр-т, 57",
+    "opened_date": "2023-09-01",
+    "monthly_revenue": 3084327,
+    "features": {
+      "population_density": 16457,
+      "avg_income_index": 1.31,
+      "competitors_count_300m": 3,
+      "foot_traffic_score": 37,
+      "car_traffic_score": 80,
+      "distance_to_metro_m": 1270,
+      "new_developments_nearby": 1,
+      "delivery_orders_density": 249,
+      "rent_price_per_sqm": 4154
+    }
+  },
+  {
+    "store_id": "s_010",
+    "lat": 55.6804,
+    "lng": 37.5712,
+    "address_label": "Новочерёмушкинская ул., 44",
+    "opened_date": "2024-01-01",
+    "monthly_revenue": 5655684,
+    "features": {
+      "population_density": 14599,
+      "avg_income_index": 1.39,
+      "competitors_count_300m": 2,
+      "foot_traffic_score": 58,
+      "car_traffic_score": 64,
+      "distance_to_metro_m": 537,
+      "new_developments_nearby": 2,
+      "delivery_orders_density": 179,
+      "rent_price_per_sqm": 4833
+    }
+  },
+  {
+    "store_id": "s_011",
+    "lat": 55.7939,
+    "lng": 37.6079,
+    "address_label": "Сущёвский Вал, 23",
+    "opened_date": "2020-02-01",
+    "monthly_revenue": 3896462,
+    "features": {
+      "population_density": 8575,
+      "avg_income_index": 1.14,
+      "competitors_count_300m": 1,
+      "foot_traffic_score": 52,
+      "car_traffic_score": 68,
+      "distance_to_metro_m": 1171,
+      "new_developments_nearby": 3,
+      "delivery_orders_density": 194,
+      "rent_price_per_sqm": 5535
+    }
+  },
+  {
+    "store_id": "s_012",
+    "lat": 55.7611,
+    "lng": 37.7043,
+    "address_label": "Солдатская ул., 6",
+    "opened_date": "2021-03-01",
+    "monthly_revenue": 5710871,
+    "features": {
+      "population_density": 18100,
+      "avg_income_index": 1.02,
+      "competitors_count_300m": 4,
+      "foot_traffic_score": 62,
+      "car_traffic_score": 65,
+      "distance_to_metro_m": 1442,
+      "new_developments_nearby": 1,
+      "delivery_orders_density": 241,
+      "rent_price_per_sqm": 4525
+    }
+  },
+  {
+    "store_id": "s_013",
+    "lat": 55.7915,
+    "lng": 37.6913,
+    "address_label": "Стромынка, 14",
+    "opened_date": "2022-04-01",
+    "monthly_revenue": 4177676,
+    "features": {
+      "population_density": 14441,
+      "avg_income_index": 1.5,
+      "competitors_count_300m": 1,
+      "foot_traffic_score": 55,
+      "car_traffic_score": 42,
+      "distance_to_metro_m": 464,
+      "new_developments_nearby": 2,
+      "delivery_orders_density": 258,
+      "rent_price_per_sqm": 4951
+    }
+  },
+  {
+    "store_id": "s_014",
+    "lat": 55.7798,
+    "lng": 37.6331,
+    "address_label": "Проспект Мира, 40",
+    "opened_date": "2023-05-01",
+    "monthly_revenue": 3693217,
+    "features": {
+      "population_density": 10668,
+      "avg_income_index": 1.28,
+      "competitors_count_300m": 1,
+      "foot_traffic_score": 64,
+      "car_traffic_score": 86,
+      "distance_to_metro_m": 366,
+      "new_developments_nearby": 1,
+      "delivery_orders_density": 317,
+      "rent_price_per_sqm": 4351
+    }
+  },
+  {
+    "store_id": "s_015",
+    "lat": 55.7108,
+    "lng": 37.6641,
+    "address_label": "Велозаводская ул., 6",
+    "opened_date": "2024-06-01",
+    "monthly_revenue": 5097052,
+    "features": {
+      "population_density": 18270,
+      "avg_income_index": 1.46,
+      "competitors_count_300m": 3,
+      "foot_traffic_score": 43,
+      "car_traffic_score": 73,
+      "distance_to_metro_m": 1580,
+      "new_developments_nearby": 4,
+      "delivery_orders_density": 237,
+      "rent_price_per_sqm": 5892
+    }
+  },
+  {
+    "store_id": "s_016",
+    "lat": 55.7731,
+    "lng": 37.4896,
+    "address_label": "Маршала Жукова, 30",
+    "opened_date": "2020-07-01",
+    "monthly_revenue": 5488613,
+    "features": {
+      "population_density": 15145,
+      "avg_income_index": 1.45,
+      "competitors_count_300m": 4,
+      "foot_traffic_score": 80,
+      "car_traffic_score": 64,
+      "distance_to_metro_m": 1058,
+      "new_developments_nearby": 4,
+      "delivery_orders_density": 335,
+      "rent_price_per_sqm": 5921
+    }
+  },
+  {
+    "store_id": "s_017",
+    "lat": 55.6637,
+    "lng": 37.6359,
+    "address_label": "Каширское ш., 28",
+    "opened_date": "2021-08-01",
+    "monthly_revenue": 4094501,
+    "features": {
+      "population_density": 18922,
+      "avg_income_index": 0.89,
+      "competitors_count_300m": 2,
+      "foot_traffic_score": 60,
+      "car_traffic_score": 45,
+      "distance_to_metro_m": 651,
+      "new_developments_nearby": 2,
+      "delivery_orders_density": 230,
+      "rent_price_per_sqm": 5433
+    }
+  },
+  {
+    "store_id": "s_018",
+    "lat": 55.7972,
+    "lng": 37.7984,
+    "address_label": "9-я Парковая ул., 32",
+    "opened_date": "2022-09-01",
+    "monthly_revenue": 4112529,
+    "features": {
+      "population_density": 20452,
+      "avg_income_index": 1.31,
+      "competitors_count_300m": 0,
+      "foot_traffic_score": 92,
+      "car_traffic_score": 51,
+      "distance_to_metro_m": 595,
+      "new_developments_nearby": 1,
+      "delivery_orders_density": 314,
+      "rent_price_per_sqm": 5651
+    }
+  },
+  {
+    "store_id": "s_019",
+    "lat": 55.7728,
+    "lng": 37.5825,
+    "address_label": "Большая Грузинская, 57",
+    "opened_date": "2023-01-01",
+    "monthly_revenue": 5768152,
+    "features": {
+      "population_density": 8760,
+      "avg_income_index": 1.16,
+      "competitors_count_300m": 1,
+      "foot_traffic_score": 78,
+      "car_traffic_score": 54,
+      "distance_to_metro_m": 310,
+      "new_developments_nearby": 1,
+      "delivery_orders_density": 295,
+      "rent_price_per_sqm": 5540
+    }
+  },
+  {
+    "store_id": "s_020",
+    "lat": 55.7089,
+    "lng": 37.6228,
+    "address_label": "Большая Тульская, 13",
+    "opened_date": "2024-02-01",
+    "monthly_revenue": 4360112,
+    "features": {
+      "population_density": 7159,
+      "avg_income_index": 0.82,
+      "competitors_count_300m": 2,
+      "foot_traffic_score": 67,
+      "car_traffic_score": 77,
+      "distance_to_metro_m": 690,
+      "new_developments_nearby": 2,
+      "delivery_orders_density": 164,
+      "rent_price_per_sqm": 5137
+    }
+  }
+]
