@@ -38,8 +38,8 @@
 
 **Files:** Modify `src/components/PotentialMap.jsx`, `tests/heatmap.test.js`.
 
-- [ ] Test normalized source weights and a larger interpolated grid.
-- [ ] Implement IDW grid generation and compact score markers.
+- [ ] Test normalized source weights and compact radial point clouds without a rectangular grid.
+- [ ] Implement deterministic radial point clouds and compact score markers.
 - [ ] Increase heatmap radius/opacity and clarify the legend.
 
 ### Task 4: Explainable UI
