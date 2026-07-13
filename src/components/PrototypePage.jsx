@@ -4,6 +4,7 @@ import { filterRecommendations } from '../domain/filtering.js';
 import Filters from './Filters.jsx';
 import RecommendationList from './RecommendationList.jsx';
 import LocationDetails from './LocationDetails.jsx';
+import PotentialMap from './PotentialMap.jsx';
 
 export default function PrototypePage({ initialData = null }) {
   const [data, setData] = useState(initialData);
@@ -22,7 +23,7 @@ export default function PrototypePage({ initialData = null }) {
     {!data && !error && <section className="load-state"><p>Загружаем геоданные…</p></section>}
     {data && <>
     <Filters filters={filters} cities={[...new Set(data.zones.map((zone) => zone.city))]} onChange={setFilters} />
-    <div className="workspace-grid"><section className="map-preview" aria-label="Карта потенциала"><div className="map-preview-grid" /><div className="map-legend"><span><i className="legend-high" />Высокий</span><span><i className="legend-mid" />Средний</span><span><i className="legend-low" />Низкий</span></div><p>Яндекс.Карта подключается на следующем этапе</p></section><RecommendationList scores={filteredScores} zonesById={zonesById} selectedZoneId={selectedZoneId} onSelect={setSelectedZoneId} /></div>
+    <div className="workspace-grid"><PotentialMap apiKey={import.meta.env.VITE_YANDEX_MAPS_KEY ?? ''} zones={data.zones} stores={data.stores} scores={filteredScores} selectedZoneId={selectedZoneId} onSelectZone={setSelectedZoneId} /><RecommendationList scores={filteredScores} zonesById={zonesById} selectedZoneId={selectedZoneId} onSelect={setSelectedZoneId} /></div>
     {selectedScore && <LocationDetails zone={zonesById.get(selectedScore.zone_id)} score={selectedScore} nearestStore={storesById.get(selectedScore.nearest_own_store.store_id)} onClose={() => setSelectedZoneId(null)} />}
     </>}
   </div>;
